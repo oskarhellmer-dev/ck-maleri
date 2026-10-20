@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Pausa hero-videon när den är utanför bild (sparar batteri på mobil)
-  var heroVideo = document.querySelector('.hero-media video');
+  var heroVideo = document.querySelector('.hero-bg video');
   if (heroVideo && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

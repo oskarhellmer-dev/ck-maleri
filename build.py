@@ -226,16 +226,21 @@ def build_index():
         '<details><summary>%s</summary><p>%s</p></details>' % (q, a) for q, a in faq)
     cities = "".join('<li>%s</li>' % c for c in CITIES)
 
-    hero_media = ('<video autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero.jpg">'
-                  '<source src="/assets/video.webm" type="video/webm">'
-                  '<source src="/assets/video.mp4" type="video/mp4"></video>'
-                  ) if HAS_VIDEO else '<img class="hero-img" src="/assets/img/hero.jpg" alt="Nyslipat fiskbensgolv i ek med kvällsljus över ytan" width="1200" height="900">'
+    hero_media = ('<div class="hero-bg"><video autoplay muted loop playsinline preload="auto" '
+                  'poster="assets/img/hero.jpg">'
+                  '<source src="assets/video.webm" type="video/webm">'
+                  '<source src="assets/video.mp4" type="video/mp4"></video></div>'
+                  ) if HAS_VIDEO else ('<div class="hero-bg"><img src="assets/img/hero.jpg" alt="'
+                                       'Nyslipat fiskbensgolv i ek med kvällsljus över ytan" '
+                                       'width="1600" height="893"></div>')
 
     body = f"""
 <main id="main">
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  {hero_media}
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
       <p class="eyebrow">Måleri &amp; golv i Uddevalla</p>
       <h1>Reporna sitter i ytan. <em>Inte i golvet.</em></h1>
       <p class="lead">Vi slipar trägolv, målar och tapetserar, lägger microcement och sätter kakel
@@ -251,13 +256,10 @@ def build_index():
         <a class="btn btn-light" href="tel:{PHONE_LINK}">Ring {PHONE_DISPLAY}</a>
       </div>
     </div>
-    <div class="hero-media">
-      {hero_media}
-      <div class="hero-note">
-        <strong>5,0 i snitt på 15 omdömen</strong>
-        <span>Från Servicefinder. Vi frågar hellre än gissar, och städar efter oss.</span>
-      </div>
-    </div>
+    <aside class="hero-card">
+      <strong>5,0 i snitt på 15 omdömen</strong>
+      <span>Från Servicefinder. Vi frågar hellre än gissar, och städar efter oss.</span>
+    </aside>
   </div>
 </section>
 
