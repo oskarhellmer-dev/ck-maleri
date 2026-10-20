@@ -9,7 +9,7 @@ PHONE_LINK = "+46" + "737033717"
 EMAIL = "ckmaleri@gmail.com"
 IG = "https://www.instagram.com/ckmaleri/"
 IG_HANDLE = "@ckmaleri"
-AREA_SHORT = "Uddevalla · Trestad"
+AREA_SHORT = "Trestad · Fyrbodal"
 CITIES = ["Uddevalla", "Trollhättan", "Vänersborg", "Ljungskile", "Munkedal",
           "Färgelanda", "Lilla Edet", "Stenungsund", "Tjörn", "Orust",
           "Lysekil", "Åmål", "Strömstad", "Lidköping"]
@@ -69,6 +69,9 @@ def local_business():
         "@type": "HousePainter",
         "name": NAME,
         "url": DOMAIN + "/",
+        "description": "Måleri och golv i Trestad och Fyrbodal. Golvslipning, målning av tak och väggar, "
+                       "kakel, klinker och microcement — med över 15 års erfarenhet.",
+        "slogan": "Noggrant utfört arbete i Trestad och Fyrbodal",
         "telephone": "+46 737 03 37 17",
         "email": EMAIL,
         "image": DOMAIN + "/assets/img/hero.jpg",
@@ -184,8 +187,8 @@ def footer():
       <span class="brand-mark" aria-hidden="true">CK</span>
       <div>
         <strong>{NAME}</strong>
-        <p>Golvslipning, måleri, microcement och plattsättning i Uddevalla och Trestad.<br>
-        Försäkrade · F-skatt · ROT-avdrag</p>
+        <p>Golvslipning, måleri, microcement och plattsättning i Trestad och Fyrbodal.<br>
+        Över 15 års erfarenhet · Försäkrade · F-skatt · ROT-avdrag</p>
       </div>
     </div>
     <div class="footer-col">
@@ -292,7 +295,7 @@ def build_index():
     <div class="hero-copy">
       <p class="eyebrow">CK Måleri &amp; Golv · Uddevalla &amp; Trestad</p>
       <h1>Golvslipning, måleri och microcement</h1>
-      <p class="hero-tag"><em>i Uddevalla och Trestad</em></p>
+      <p class="hero-tag"><em>i Uddevalla, Trestad och Fyrbodal</em></p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#kontakt">Begär kostnadsfri offert <span class="arrow">→</span></a>
         <a class="btn btn-light" href="tel:{PHONE_LINK}">Ring {PHONE_DISPLAY}</a>
@@ -315,6 +318,19 @@ def build_index():
     <div><b>Plattsättning</b> · kakel och klinker</div>
   </div>
 </div>
+
+<section class="section">
+  <div class="wrap narrow prose">
+    <p class="eyebrow">Välkommen</p>
+    <h2>Välkommen till oss på <em>CK Måleri &amp; Golv</em></h2>
+    <p class="lead" style="color:var(--ink-soft)">Vi ger gamla parkettgolv nytt liv, förnyar tak och
+      väggar med fräscha färger och hjälper dig med kakel, klinker samt microcement.</p>
+    <p class="lead" style="color:var(--ink-soft)">Med över 15 års erfarenhet erbjuder vi noggrant
+      utfört arbete i Trestad och Fyrbodal.</p>
+    <p style="margin-top:26px"><a class="btn btn-primary" href="#kontakt">Varmt välkommen att höra av
+      dig <span class="arrow">→</span></a></p>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
@@ -432,11 +448,13 @@ def build_index():
     </div>
     <dl class="facts">
       <div><dt>Fast pris skriftligt</dt><dd>Priset du får efter besiktning är priset. Inga tillägg när jobbet är igång.</dd></div>
+      <div><dt>Över 15 års erfarenhet</dt><dd>Vi har slipat, målat och satt kakel i över femton år. Det mesta har vi sett förut.</dd></div>
       <div><dt>Egna slipmaskiner</dt><dd>Bona-maskiner och rätt slipsteg — därför blir ytan jämn och inte randig.</dd></div>
       <div><dt>Försäkrat</dt><dd>F-skatt, företags- och ansvarsförsäkring. Du kan lämna över nycklarna.</dd></div>
       <div><dt>ROT-avdrag</dt><dd>Där arbetet kvalificerar drar vi av det direkt på fakturan.</dd></div>
       <div><dt>Städat efter oss</dt><dd>Slipdamm och färgstänk följer inte med hem. Vi dammsuger och torkar av.</dd></div>
       <div><dt>En kontakt</dt><dd>Samma person från offert till färdigt jobb — ingen växel, inga mellanhänder.</dd></div>
+      <div><dt>Trestad och Fyrbodal</dt><dd>Vi utgår från Uddevalla och jobbar i hela Fyrbodal, inte bara i stan.</dd></div>
     </dl>
   </div>
 </section>
@@ -457,10 +475,9 @@ def build_index():
 <section class="section section-alt" id="omraden">
   <div class="wrap">
     <p class="eyebrow">Områden</p>
-    <h2>Uddevalla och <em>Trestad</em></h2>
+    <h2>Trestad och <em>Fyrbodal</em></h2>
     <p class="section-lead">Vi utgår från Uddevalla och jobbar i Trestad — Uddevalla, Trollhättan och
-      Vänersborg — och vidare längs Bohuslänskusten och uppåt Dalsland. Är du osäker på om vi kommer
-      till dig, ring och fråga.</p>
+      Vänersborg — och vidare ut i övriga Fyrbodal. Är du osäker på om vi kommer till dig, ring och fråga.</p>
     <ul class="areas">{cities}</ul>
   </div>
 </section>
@@ -610,7 +627,7 @@ def build_microcement():
         ("Hur gör man rent microcement?",
          "Ljummet vatten och ett pH-neutralt rengöringsmedel, med mjuk mopp eller trasa. Undvik skurmedel, syra, ammoniak, klorin och slipande medel, och använd inte skurborste. Torka upp vin, kaffe och olja innan det ligger kvar."),
         ("Lägger ni microcement i Trollhättan och Vänersborg?",
-         "Ja. Vi utgår från Uddevalla och arbetar i hela Trestad samt längs Bohuslänskusten och uppåt Dalsland. Ring om du är osäker på om vi kommer till dig."),
+         "Ja. Vi utgår från Uddevalla och arbetar i hela Trestad och Fyrbodal. Ring om du är osäker på om vi kommer till dig."),
     ]
     faq_html = "".join('<details><summary>%s</summary><p>%s</p></details>' % (q, a) for q, a in faq)
 
