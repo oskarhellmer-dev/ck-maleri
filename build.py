@@ -1,3 +1,7 @@
+"""OBS: HTML-filerna underhålls nu för hand (riktiga kundfoton i webp, egna gallerier).
+Den här filen kan bygga en grundversion men skriver INTE över de handredigerade sidorna
+om du inte kör den medvetet. Kör inte utan att jämföra mot index.html först.
+"""
 #!/usr/bin/env python3
 # Bygger ckmaleri.se som statisk HTML. Kör: python3 build.py
 import os, json, re, html
@@ -74,7 +78,7 @@ def local_business():
         "slogan": "Noggrant utfört arbete i Trestad och Fyrbodal",
         "telephone": "+46 737 03 37 17",
         "email": EMAIL,
-        "image": DOMAIN + "/assets/img/hero.jpg",
+        "image": DOMAIN + "/assets/img/og.jpg",
         "priceRange": "Offert efter besiktning",
         "address": {"@type": "PostalAddress", "addressLocality": "Uddevalla",
                     "addressRegion": "Västra Götalands län", "addressCountry": "SE"},
@@ -132,7 +136,7 @@ def head(title, desc, path, schema, extra_head="", robots="index,follow"):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{canon}">
-<meta property="og:image" content="{DOMAIN}/assets/img/hero.jpg">
+<meta property="og:image" content="{DOMAIN}/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#16382c">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -279,10 +283,10 @@ def build_index():
     cities = "".join('<li>%s</li>' % c for c in CITIES)
 
     hero_media = ('<div class="hero-bg"><video autoplay muted loop playsinline preload="auto" '
-                  'poster="assets/img/hero.jpg">'
+                  'poster="assets/img/hero.webp">'
                   '<source src="assets/video.webm" type="video/webm">'
                   '<source src="assets/video.mp4" type="video/mp4"></video></div>'
-                  ) if HAS_VIDEO else ('<div class="hero-bg"><img src="assets/img/hero.jpg" alt="'
+                  ) if HAS_VIDEO else ('<div class="hero-bg"><img src="assets/img/hero.webp" alt="'
                                        'Nyslipat fiskbensgolv i ek med kvällsljus över ytan" '
                                        'width="1600" height="893"></div>')
 
@@ -340,7 +344,7 @@ def build_index():
       tätskikt och ordning. Vi gör allt själva, så du slipper samordna tre firmor och två tidsplaner.</p>
     <div class="svc-grid">
       <a class="svc" href="/golvslipning.html">
-        <img src="/assets/img/tjanst-golvslipning.jpg" alt="Golvslipmaskin på ett trägolv under arbete" loading="lazy" width="290" height="200">
+        <img src="/assets/img/tj-golv.webp" alt="Golvslipmaskin på ett trägolv under arbete" loading="lazy" width="600" height="450">
         <div class="svc-body">
           <h3>Golvslipning</h3>
           <p>Parkett, fiskben och gamla brädgolv slipas och behandlas om. Ofta är golvet du redan har bättre än det du tänkt köpa.</p>
@@ -349,7 +353,7 @@ def build_index():
         </div>
       </a>
       <a class="svc" href="/maleri-och-tapet.html">
-        <img src="/assets/img/tjanst-maleri.jpg" alt="Måleriarbete utvändigt på en rödmålad byggnad" loading="lazy" width="290" height="200">
+        <img src="/assets/img/tj-maleri.webp" alt="Måleriarbete utvändigt på en rödmålad byggnad" loading="lazy" width="600" height="450">
         <div class="svc-body">
           <h3>Måleri &amp; tapet</h3>
           <p>Väggar, tak, fönster, dörrar och fasader. Vi spacklar och grundar ordentligt — annars syns fusket i dåligt ljus.</p>
@@ -358,7 +362,7 @@ def build_index():
         </div>
       </a>
       <a class="svc" href="/microcement.html">
-        <img src="/assets/img/tjanst-microcement.jpg" alt="Badrum med fogfri microcementyta" loading="lazy" width="290" height="200">
+        <img src="/assets/img/tj-microcement.webp" alt="Badrum med fogfri microcementyta" loading="lazy" width="600" height="450">
         <div class="svc-body">
           <h3>Microcement</h3>
           <p>Fogfria ytor på golv, väggar och bänkskivor. Ett badrum i ett stycke, utan fogar som missfärgas.</p>
@@ -367,7 +371,7 @@ def build_index():
         </div>
       </a>
       <a class="svc" href="/plattsattning.html">
-        <img src="/assets/img/tjanst-plattsattning.jpg" alt="Nylagt kakel i badrum med dusch och rund spegel" loading="lazy" width="290" height="200">
+        <img src="/assets/img/tj-plattsattning.webp" alt="Nylagt kakel i badrum med dusch och rund spegel" loading="lazy" width="600" height="450">
         <div class="svc-body">
           <h3>Plattsättning</h3>
           <p>Kakel och klinker i hall, kök och badrum — med tätskikt som är gjort rätt, inte bara snyggt på ytan.</p>
@@ -386,27 +390,27 @@ def build_index():
     <p class="section-lead">Inga stockfoton. Det här är ytor vi gjort i Uddevalla med omnejd.</p>
     <div class="gallery">
       <figure class="fig">
-        <img src="/assets/img/jobb-fiskben-slipat.jpg" alt="Fiskbensparkett i ek efter slipning" loading="lazy" width="400" height="300">
+        <img src="/assets/img/jobb-fiskben.webp" alt="Fiskbensparkett i ek efter slipning" loading="lazy" width="800" height="600">
         <figcaption><b>Fiskben, slipat</b><br>Herringbone i ek — samma mönster, helt annan yta.</figcaption>
       </figure>
       <figure class="fig">
-        <img src="/assets/img/jobb-nylackat.jpg" alt="Nylackat trägolv med ljusinfall från fönster" loading="lazy" width="400" height="300">
+        <img src="/assets/img/jobb-lackning.webp" alt="Nylackat trägolv med ljusinfall från fönster" loading="lazy" width="800" height="600">
         <figcaption><b>Nylackat</b><br>Gammal parkett efter slipning och behandling.</figcaption>
       </figure>
       <figure class="fig">
-        <img src="/assets/img/jobb-kulturhuset-scen.jpg" alt="Stor scenyta i trä under slipning" loading="lazy" width="400" height="300">
+        <img src="/assets/img/jobb-kulturhuset.webp" alt="Stor scenyta i trä under slipning" loading="lazy" width="800" height="600">
         <figcaption><b>Kulturhusets scen</b><br>Stor yta, tagen i etapper mellan bokningar.</figcaption>
       </figure>
       <figure class="fig">
-        <img src="/assets/img/jobb-mitt-i-jobbet.jpg" alt="Trägolv halvvägs genom slipning med maskin i bild" loading="lazy" width="400" height="300">
+        <img src="/assets/img/jobb-slipning.webp" alt="Trägolv halvvägs genom slipning med maskin i bild" loading="lazy" width="800" height="600">
         <figcaption><b>Mitt i jobbet</b><br>Halva golvet kvar att slipa ner till rent trä.</figcaption>
       </figure>
       <figure class="fig">
-        <img src="/assets/img/jobb-ljust-och-rent.jpg" alt="Ljust och rent trägolv efter slipning" loading="lazy" width="400" height="300">
+        <img src="/assets/img/jobb-parkett.webp" alt="Ljust och rent trägolv efter slipning" loading="lazy" width="800" height="600">
         <figcaption><b>Ljust och rent</b><br>Furugolv, färdigt och avdammat.</figcaption>
       </figure>
       <figure class="fig">
-        <img src="/assets/img/jobb-maskinerna.jpg" alt="Golvslipmaskin av märket Bona på plats i lokalen" loading="lazy" width="400" height="300">
+        <img src="/assets/img/jobb-krona.webp" alt="Golvslipmaskin av märket Bona på plats i lokalen" loading="lazy" width="800" height="600">
         <figcaption><b>Maskinerna på plats</b><br>Rätt maskin gör jämn yta — fel maskin gör ränder.</figcaption>
       </figure>
     </div>
@@ -647,7 +651,7 @@ def build_microcement():
   </div>
 </section>
 <div class="wrap page-media">
-  <img src="assets/img/tjanst-microcement.jpg" alt="Badrum med fogfri microcementyta och glasdörr" width="1160" height="552">
+  <img src="assets/img/tj-microcement.webp" alt="Badrum med fogfri microcementyta och glasdörr" width="1160" height="552">
 </div>
 
 <section class="section">
@@ -872,7 +876,7 @@ def build_services():
         "Vi slipar och behandlar parkett, fiskben och gamla brädgolv i Uddevalla, Trollhättan och Vänersborg. Fast pris, ROT-avdrag och kostnadsfri offert.",
         "Slipning som får <em>ditt</em> golv att se nytt ut",
         "Under repor och grå yta ligger nästan alltid ett bra trägolv. Vi slipar fram det och behandlar det — lack, olja eller pigment.",
-        "/assets/img/jobb-fiskben-slipat.jpg",
+        "/assets/img/jobb-fiskben.webp",
         "Fiskbensparkett i ek efter slipning och behandling",
         ["Ett trägolv som legat i trettio år har tjockt nog med trä kvar för att slipas om flera gånger. Det är därför ett gammalt golv ofta blir vackrare än ett nytt: årsringarna, mönstret och dimensionerna finns redan.",
          "Vi börjar med att titta på underlaget. Är trät fuktskadat, genomgånget eller ligger det ojämnt i förhållande till resten av huset säger vi det innan vi börjar — hellre ett tråkigt besked i tid än en överraskning halvvägs.",
@@ -899,7 +903,7 @@ def build_services():
         "Invändig och utvändig målning, tapetsering, spackling och fasad i Uddevalla och Trestad. Fast pris, försäkrat och ROT-avdrag. Begär kostnadsfri offert.",
         "Måleri som ser färdigt ut <em>även</em> i kvällsljus",
         "Väggar, tak, fönster, dörrar och fasader. Vi lägger tiden på spackel, grundning och täckning — det är där ett måleri­jobb avgörs.",
-        "/assets/img/tjanst-maleri.jpg",
+        "/assets/img/tj-maleri.webp",
         "Utvändigt måleriarbete på rödmålad byggnad",
         ["Ett måleriarbete som ska hålla börjar långt före första strykningen. Handlar det om utvändigt trä ska löst sittande färg bort, trät tvättas och grundas — målar man över gammal, dåligt fästande färg följer allt med inom ett par år.",
          "Invändigt handlar det mesta om underlaget. Spackel som inte torkat klart, hörn som är slarvigt satta eller gammal tapetlim som lämnats kvar syns direkt i släpljuset från ett fönster. Vi lägger tiden där i stället för att lägga på fler lager färg.",
@@ -928,7 +932,7 @@ def build_services():
         "Plattsättning av kakel och klinker i hall, kök och badrum i Uddevalla och Trestad. Korrekt tätskikt, noggrann fogning och fast pris. Begär kostnadsfri offert.",
         "Plattor är enkla. <em>Tätskiktet</em> är det som gäller.",
         "Kakel och klinker i hall, kök och badrum — med tätskikt som är gjort rätt. Det är där badrum faktiskt håller eller inte.",
-        "/assets/img/tjanst-plattsattning.jpg",
+        "/assets/img/tj-plattsattning.webp",
         "Nylagt kakel i badrum med dusch, handfat och rund spegel",
         ["Ett badrum kan se färdigt ut och ändå vara fel. Tätskiktet ligger bakom plattorna, osynligt för alla utom den som gjort jobbet. Är det slarvigt gjort märks det ett par år senare, som fukt i väggen eller en fog som aldrig torkar.",
          "Vi gör tätskikt enligt gällande regler och dokumenterar med bilder, så att du har papperen om något händer. Sedan sätter vi plattorna. Fall mot golvbrunn kontrolleras löpande, inte på slutet — lutning går inte att rätta efteråt.",

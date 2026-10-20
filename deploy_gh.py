@@ -72,8 +72,9 @@ for i in range(40):
         print("LIVE:", URL)
         break
 for asset in ["assets/styles.css", "assets/app.js", "assets/video.mp4",
-              "assets/img/hero.jpg", "assets/img/tjanst-golvslipning.jpg",
-              "golvslipning.html", "sitemap.xml", "robots.txt"]:
+              "assets/img/hero.webp", "assets/img/og.jpg", "assets/img/page-golv.webp",
+              "assets/img/tj-golv.webp", "assets/img/jobb-fiskben.webp",
+              "golvslipning.html", "microcement.html", "sitemap.xml", "robots.txt"]:
     try:
         r = urllib.request.urlopen(urllib.request.Request(URL + asset, headers={"User-Agent": "hermes"}), timeout=30)
         print("  %-38s %s  %d bytes" % (asset, r.status, len(r.read())))
