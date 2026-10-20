@@ -545,6 +545,267 @@ def service_page(slug, nav_name, title, desc, h1, lead, img, img_alt,
     write(slug, page)
     return title, desc
 
+def build_microcement():
+    """Egen, innehållsrik sida för microcement (inte den generiska mallen)."""
+    faq = [
+        ("Vad är microcement?",
+         "Microcement är ett tunt ytskikt som byggs upp av cement, fin sand och polymerer och läggs i två till tre lager. Det ger en fogfri yta med stenkänsla och kan läggas på de flesta underlag, både ute och inne."),
+        ("Vad kostar microcement i Uddevalla?",
+         "Priset beror på yta, underlag, kulör och vilken glans du väljer. Microcement är som mest kostnadseffektivt när det befintliga underlaget kan behållas, eftersom rivning, nytt tätskikt och nytt kakel då inte behövs. Du får ett fast pris efter besiktning."),
+        ("Kan microcement läggas direkt på kakel?",
+         "Ja, om plattorna sitter fast, underlaget är jämnt och tätskiktet är intakt. Då slipper du riva ut det gamla, bygga upp väggen igen och köpa nytt kakel — det är där den stora besparingen ligger."),
+        ("Går det att lägga microcement på plastmatta?",
+         "Ja, på en plastmatta i gott skick. Kraven är att ytskiktet är helt, att golvbrunnen är frisk, att fallet mot brunnen är godkänt och att det inte finns misstanke om läckage. Är något av det tveksamt rivs badrummet först."),
+        ("Är microcement godkänt i badrum?",
+         "I ett våtrum är det inte ytskiktet som godkänns, utan tätskiktet under det. Kakel, klinker och microcement är ytan man ser — det är folien bakom som gör rummet vattentätt. Vi gör tätskiktet enligt branschreglerna och dokumenterar med bilder."),
+        ("Kan microcement spricka?",
+         "Microcement är ett ytskikt och följer därför underlaget. Är underlaget stabilt håller ytan; rör det sig följer mikrocementen med. Risken är liten när underlaget är fast, gamla sprickor lagas, grundningen blir rätt och lagren inte läggs för tjockt eller torkar för snabbt."),
+        ("Fungerar microcement med golvvärme?",
+         "Ja. Värmen stängs av eller hålls låg i god tid före läggningen, ytan får inte vara för varm när massan läggs, och efteråt fas värmen tillbaka långsamt över flera dagar. Exakta tider står i offerten."),
+        ("Kan man lägga microcement i källare?",
+         "I en isolerad och dränerad källare går det bra. I en torr källare utan dränering kan golv fungera, men med viss risk för missfärgning, och vissa produkter krävs för väggar. Är källaren fuktig avråder vi helt."),
+        ("Hur länge håller microcement?",
+         "I ett badrum är det tätskiktet under ytan som sätter livslängden, och det håller i decennier. Själva ytan håller beroende på hur mycket den används — i ett hem många år, och går att fräscha upp utan att byta underlag."),
+        ("Hur gör man rent microcement?",
+         "Ljummet vatten och ett pH-neutralt rengöringsmedel, med mjuk mopp eller trasa. Undvik skurmedel, syra, ammoniak, klorin och slipande medel, och använd inte skurborste. Torka upp vin, kaffe och olja innan det ligger kvar."),
+        ("Lägger ni microcement i Trollhättan och Vänersborg?",
+         f"Ja. Vi arbetar i Uddevalla, Trollhättan, Vänersborg och bygderna runtomkring — {', '.join(CITIES[3:])}. Ring om du är osäker på om vi kommer till dig."),
+    ]
+    faq_html = "".join('<details><summary>%s</summary><p>%s</p></details>' % (q, a) for q, a in faq)
+
+    title = "Microcement i Uddevalla och Trestad | CK Måleri & Golv"
+    desc = ("Microcement på golv, väggar, bänkskivor och i badrum i Uddevalla och Trestad. "
+            "Fogfria ytor, ofta direkt på befintligt kakel. Begär kostnadsfri offert.")
+
+    body = f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Brödsmulor"><a href="index.html">Start</a><span>/</span>Microcement</nav>
+    <p class="eyebrow" style="margin-top:22px">Tjänst · Uddevalla, Trollhättan &amp; Vänersborg</p>
+    <h1>Microcement — fogfria ytor i <em>Uddevalla och Trestad</em></h1>
+    <p class="lead">Golv, väggar, bänkskivor och hela badrum i ett stycke. Microcement läggs i tunna
+      lager och ger en fogfri yta med stenkänsla — ofta direkt ovanpå det du redan har.</p>
+  </div>
+</section>
+<div class="wrap page-media">
+  <img src="assets/img/tjanst-microcement.jpg" alt="Badrum med fogfri microcementyta och glasdörr" width="1160" height="552">
+</div>
+
+<section class="section">
+  <div class="wrap two-col prose">
+    <div>
+      <h2>Vad microcement är — och varför vi lägger det</h2>
+      <p>Microcement är cement, fin sand och polymerer som läggs i två till tre tunna lager och
+        förseglas. Resultatet är en sammanhängande yta med stenkänsla, utan skarvar, och den kan
+        läggas på nästan allt: kakel, klinker, betong, flytspackel, puts, gips och målade ytor.</p>
+      <p>Vi har satt kakel och klinker i många år och lägger microcement med samma inställning:
+        underarbetet avgör. Ett ytskikt kan aldrig bli bättre än det underlag det ligger på, hur
+        snyggt det än stryks på.</p>
+      <p>Därför säger vi nej ibland. Sviktar golvet, är källaren fuktig eller sitter kaklet löst är
+        microcement fel lösning — och det säger vi innan du betalat för något.</p>
+    </div>
+    <div>
+      <div class="price-box">
+        <p><strong>Fast pris efter besiktning.</strong> Microcement kostar mer i arbetstid än kakel,
+          men sparar ofta hela rivningen. Vi räknar på ditt badrum eller din yta och du får siffran
+          skriftligt innan vi börjar.</p>
+      </div>
+      <h3>Fördelar</h3>
+      <ul class="checks">
+        <li>Fogfritt — inga fogar att skura eller byta</li>
+        <li>Tunt, bygger bara några millimeter</li>
+        <li>Kan läggas på befintligt underlag</li>
+        <li>Mindre rivning, mindre damm, kortare tid</li>
+        <li>Tåligt mot fukt, spill och dagligt slitage</li>
+        <li>Många kulörer — slät eller med struktur</li>
+        <li>Lätt att torka av med milt medel</li>
+      </ul>
+      <p><a class="btn btn-primary" href="index.html#kontakt">Begär kostnadsfri offert <span class="arrow">→</span></a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap prose">
+    <p class="eyebrow">Användningsområden</p>
+    <h2>Var microcement gör <em>störst</em> skillnad</h2>
+    <div class="facts" style="margin-top:30px">
+      <div>
+        <dt>Badrum</dt>
+        <dd>Fogarna är det som åldras först — de missfärgas, blir svåra att få rena och kräver
+          till slut ny fog. I ett badrum med microcement finns inga fogar att hålla efter. Ytan
+          läggs på golv, väggar och i duschzon, och rummet blir lättare att hålla rent.</dd>
+      </div>
+      <div>
+        <dt>Kök</dt>
+        <dd>Bänkskivor, köksöar och stänkskydd i ett stycke, utan skarv vid diskbänk och spis.
+          Tåligt mot fukt, spill och daglig användning — och stänkskyddet kan dras upp i samma
+          material så att köket hänger ihop.</dd>
+      </div>
+      <div>
+        <dt>Golv</dt>
+        <dd>Hall, vardagsrum och mindre lokaler. Ett fogfritt golv är enkelt att hålla rent och
+          tål att man går på det varje dag. Ytan kan göras slät eller med mer struktur.</dd>
+      </div>
+      <div>
+        <dt>Väggar</dt>
+        <dd>Microcement fäster på kakel, puts och gips. Då slipper du bilning, damm och allt som
+          byggs upp från grunden — ett badrum från sent åttiotal kan bli modernt utan rivning.</dd>
+      </div>
+      <div>
+        <dt>Möbler och detaljer</dt>
+        <dd>Bord, hyllor, handfat och fönsterbänkar. Ytan blir ett stycke och kan få samma ton
+          som rummet i övrigt — ett sätt att få något som inte finns i butik.</dd>
+      </div>
+      <div>
+        <dt>Utomhus</dt>
+        <dd>Med rätt försegling tål microcement väder och temperaturväxlingar. Bra till utegolv,
+          trappor och fasader där du vill ha enhetligt material inne och ute.</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two-col prose">
+    <div>
+      <h2>Vad det kan läggas på — och vad vi säger nej till</h2>
+      <p>Grundregeln är enkel: microcement följer underlaget. Rör sig underlaget spricker ytan,
+        hur snyggt den än läggs. Därför bedömer vi alltid underlaget först.</p>
+      <h3>Fungerar bra</h3>
+      <ul class="checks">
+        <li>Kakel och klinker som sitter fast</li>
+        <li>Betong och flytspackel</li>
+        <li>Putsade och målade väggar, gips</li>
+        <li>Plastmatta i gott skick</li>
+        <li>Träfiber- och spånskivor som är stabila</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:0">Vi säger nej</h3>
+      <ul class="checks">
+        <li>Massivt trä som rör sig med fukten</li>
+        <li>Sviktande eller löst liggande underlag</li>
+        <li>Fuktig källare utan dränering</li>
+        <li>Sprucket underlag där sprickorna inte åtgärdas</li>
+        <li>Underlag där tätskiktet är skadat</li>
+      </ul>
+      <div class="price-box">
+        <p>Vi sätter också kakel och klinker. Det gör att du kan få tätskikt, kakel och microcement
+          av samma firma — ingen samordning, ingen som pekar på någon annan om något inte håller.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap narrow prose">
+    <p class="eyebrow">Våtrum</p>
+    <h2>Tätskiktet är det som <em>avgör</em></h2>
+    <p>Det finns en vanlig missuppfattning om microcement i badrum: att det är ytskiktet som
+      godkänns. Så är det inte. I ett våtrum är det tätskiktet under ytan som godkänns — kakel,
+      klinker och microcement är materialet man ser, medan det är folien bakom som gör rummet
+      vattentätt.</p>
+    <p>Vi gör tätskiktet enligt branschreglerna och dokumenterar arbetet med bilder, så att du har
+      papperen om något skulle hända. Är tätskiktet redan gjort och intakt går microcement utmärkt
+      att lägga ovanpå. Är det trasigt eller tveksamt rivs det först — det är inte där man sparar
+      pengar.</p>
+    <p>Läs gärna mer om vad som gäller för våtrum på
+      <a href="https://www.gvk.se" rel="noopener nofollow" target="_blank">gvk.se</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Arbetsgång</p>
+    <h2>Så gör vi — steg för steg</h2>
+    <ol class="steps" style="grid-template-columns:repeat(3,1fr)">
+      <li><span class="step-num">1</span><h3>Vi bedömer underlaget</h3>
+        <p>Fukt, rörelse och fastsättning. Här avgörs om resultatet kommer att hålla, och om
+          microcement är rätt val alls.</p></li>
+      <li><span class="step-num">2</span><h3>Lagning och grundning</h3>
+        <p>Sprickor och ojämnheter åtgärdas, ytan rengörs och grundas så att massan fäster
+          ordentligt.</p></li>
+      <li><span class="step-num">3</span><h3>Armering</h3>
+        <p>I hörn, skarvar och vid genomföringar armerar vi där rörelser uppstår — det är där
+          sprickor annars börjar.</p></li>
+      <li><span class="step-num">4</span><h3>Två till tre lager</h3>
+        <p>Tunna lager läggs och slipas mellan varven. Tjocka lager torkar fel och ger sämre yta.</p></li>
+      <li><span class="step-num">5</span><h3>Försegling</h3>
+        <p>Ytan förseglas i vald glans — matt, halvmatt eller sidenmatt. Det är förseglingen som
+          gör den tålig mot fukt och slitage.</p></li>
+      <li><span class="step-num">6</span><h3>Härdning och överlämning</h3>
+        <p>Vi går igenom hur du sköter ytan och när den kan belastas fullt. Sedan städar vi
+          efter oss.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap two-col prose">
+    <div>
+      <h2>Kulör och yta</h2>
+      <p>Microcement finns i allt från ljusgrå och sand till varm beige och mörk grafit. Ytan kan
+        vara slät eller ha mer struktur, och hur mycket liv materialet får beror på kulören, hur
+        det läggs och temperaturen i rummet. Alla ytor blir därför unika — det är en del av poängen.</p>
+      <p>Vi tar med prover så att du ser tonen i din egen belysning innan vi börjar, i stället för
+        att välja efter en bild på en skärm.</p>
+    </div>
+    <div>
+      <h2>Så håller du ytan fin</h2>
+      <ul class="checks">
+        <li>Ljummet vatten och pH-neutralt medel</li>
+        <li>Mjuk mopp eller trasa — inte skurborste</li>
+        <li>Undvik syra, ammoniak, klorin och skurmedel</li>
+        <li>Torka upp vin, kaffe och olja innan det ligger kvar</li>
+        <li>Ställ inte heta kokkärl direkt på ytan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow prose">
+    <p class="eyebrow">Vanliga frågor</p>
+    <h2>Frågor vi får om microcement</h2>
+    <p class="section-lead">Pengar, risk och det praktiska — i den ordningen folk brukar fråga.</p>
+    {faq_html}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">Områden</p>
+    <h2>Vi lägger microcement i hela <em>Trestad</em></h2>
+    <p class="section-lead">Utgår från Uddevalla. Bygderna runtomkring tar vi oss också till.</p>
+    <ul class="areas">{"".join('<li>%s</li>' % c for c in CITIES)}</ul>
+    <p style="margin-top:26px"><a class="btn btn-outline" href="plattsattning.html">Se vår plattsättning <span class="arrow">→</span></a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2>Kostnadsfri offert på microcement</h2>
+        <p style="margin:6px 0 0;color:#cfe3d6">Skicka några rader om ytan — vad den sitter på i dag
+          och ungefär hur stor den är — så återkommer vi med pris och tid.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="index.html#kontakt">Begär offert</a>
+        <a class="btn btn-light" href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+"""
+    page = (head(title, desc, "/microcement.html", service_schema("Microcement", "microcement.html", desc, faq))
+            + header("/microcement.html") + body + footer())
+    write("microcement.html", page)
+    return title, desc
+
 def build_services():
     out = []
     out.append(service_page(
@@ -601,32 +862,7 @@ def build_services():
          ("Microcement", "/microcement.html", "Fogfria ytor på golv, väggar och bänkskivor."),
          ("Plattsättning", "/plattsattning.html", "Kakel och klinker i hall, kök och badrum.")]))
 
-    out.append(service_page(
-        "microcement.html", "Microcement",
-        "Microcement i Uddevalla och Trestad | CK Måleri & Golv",
-        "Fogfria ytor med microcement på golv, väggar och bänkskivor i Uddevalla, Trollhättan och Vänersborg. Ofta ovanpå befintligt underlag. Kostnadsfri offert.",
-        "Ett badrum i ett stycke, <em>utan fogar</em>",
-        "Microcement ger en tunn, fogfri yta med stenkänsla — på golv, väggar och bänkskivor. Ofta kan du behålla underlaget du har.",
-        "/assets/img/tjanst-microcement.jpg",
-        "Badrum med fogfri microcementyta och glasdörr",
-        ["Fogar är det som åldras först i ett badrum. De missfärgas, blir svåra att få rena och kräver till slut ny fog. Microcement läggs i tunna lager över hela ytan och ger i stället en sammanhängande yta utan skarvar att hålla efter.",
-         "Det går att lägga på många underlag — kakel, betong, golvspån och vissa plastmaterial — förutsatt att underlaget sitter fast och är stabilt. Vi bedömer det på plats. Rör det sig eller är vått säger vi nej, för då spricker ytan oavsett hur snyggt det läggs.",
-         "Resultatet är tåligt men inte oförstörbart. Vi går igenom hur du håller efter ytan, vilket är enkelt: milt rengöringsmedel och ingen skurborste."],
-        ["Bedömning av underlaget", "Grundning och armering där det behövs",
-         "Två till tre lager microcement", "Slipning mellan lagren",
-         "Försegling i vald glans", "Fogfria golv, väggar och bänkskivor",
-         "Rekommendationer för rengöring efteråt"],
-        [("Bedömning", "Vi tittar på ytan och avgör om microcement är rätt — eller om du blir gladare av kakel."),
-         ("Provyta och kulör", "Vi går igenom ton och glans innan hela ytan läggs."),
-         ("Läggning och försegling", "Lagren läggs, slipas och förseglas. Ytan kan användas efter härdning.")],
-        [("Kan microcement läggas ovanpå kakel?", "Ja, i många fall. Kravet är att plattorna sitter fast och att ytan är jämn. Har kakel börjat släppa måste det bort först."),
-         ("Hur tåligt är det?", "Tåligt i normal användning, men det ska skötas milt. Skurmedel och skurborste sliter på förseglingen."),
-         ("Funkar det i duschen?", "Ja, med rätt försegling och korrekt tätskikt bakom. Utan tätskikt ska det inte läggas i våtrum."),
-         ("Hur länge innan ytan kan användas?", "Den går att gå på tidigare än man tror, men full belastning och blöta ytor väntar vi med. Exakt tid får du i offerten.")],
-        "<p><strong>Pris efter besiktning.</strong> Microcement kostar mer i arbetstid än kakel men sparar underlag — och slipper fogar. Vi räknar på ditt badrum och du får siffran svart på vitt.</p>",
-        [("Golvslipning", "/golvslipning.html", "Trägolv slipas och behandlas — ofta istället för nytt golv."),
-         ("Måleri &amp; tapet", "/maleri-och-tapet.html", "Väggar, tak, fönster och fasad."),
-         ("Plattsättning", "/plattsattning.html", "Kakel och klinker med tätskikt gjort rätt.")]))
+    out.append(build_microcement())
 
     out.append(service_page(
         "plattsattning.html", "Plattsättning",
