@@ -169,6 +169,8 @@ figure.fig figcaption b{color:var(--ink);font-weight:650}
 .review .who b{display:block;font-size:15.4px}
 .review .who small{color:var(--muted);font-size:13.6px}
 .reviews-note{font-size:14px;color:var(--muted);margin-top:18px}
+.reviews-note a{color:var(--accent-dark)}
+.stars{color:#d99b2b;letter-spacing:2px;font-size:15px;margin:0 0 10px!important}
 
 /* Områden */
 .areas{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}

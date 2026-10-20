@@ -10,8 +10,56 @@ EMAIL = "ckmaleri@gmail.com"
 IG = "https://www.instagram.com/ckmaleri/"
 IG_HANDLE = "@ckmaleri"
 AREA_SHORT = "Uddevalla · Trestad"
-CITIES = ["Uddevalla", "Trollhättan", "Vänersborg", "Ljungskile",
-          "Lilla Edet", "Färgelanda", "Munkedal", "Sjuntorp"]
+CITIES = ["Uddevalla", "Trollhättan", "Vänersborg", "Ljungskile", "Munkedal",
+          "Färgelanda", "Lilla Edet", "Stenungsund", "Tjörn", "Orust",
+          "Lysekil", "Åmål", "Strömstad", "Lidköping"]
+
+# Riktiga omdömen från CK Måleri & Kakel på Servicefinder (hämtade 2026-10-20).
+# Snitt 5,0 av 15 omdömen — dessa tre är de som har skriven text.
+REVIEWS = [
+    {"name": "Salah", "date": "2026-05-08",
+     "job": "Nytt golv, målning och installation av vask",
+     "text": "Jäkligt duktiga och väldigt bra service fick man. Otroligt trevliga och hjälpsamma.",
+     "color": "#4a6fa5"},
+    {"name": "Mladen", "date": "2026-04-17",
+     "job": "Slipa och pigmentera ekparkettgolv",
+     "text": "Väldigt nöjd med slipning och behandling av mitt parkettgolv, det blev precis som jag hade "
+             "hoppats på. Dessutom trevligt bemötande och bra kommunikation. Rekommenderar varmt "
+             "Christoffer och CK Måleri!",
+     "color": "#c07a34"},
+    {"name": "Ingrid", "date": "2026-02-28",
+     "job": "Slipning av trägolv 20 kvm",
+     "text": "Pålitlig och väl genomfört uppdrag. Var noga med att jag fick den nyansen jag hade "
+             "tänkt. Hjälpsam med med kring arbetet runt uppdraget.",
+     "color": "#3f8f5e"},
+]
+SERVICEFINDER = "https://servicefinder.se/foretag/7849162"
+SV_MONTHS = ["januari", "februari", "mars", "april", "maj", "juni", "juli",
+             "augusti", "september", "oktober", "november", "december"]
+
+def sv_date(iso):
+    y, m, _ = iso.split("-")
+    return "%s %s" % (SV_MONTHS[int(m) - 1], y)
+
+def reviews_schema():
+    return [{"@type": "Review", "author": {"@type": "Person", "name": r["name"]},
+             "datePublished": r["date"], "name": r["job"], "reviewBody": r["text"],
+             "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5",
+                              "worstRating": "1"}}
+            for r in REVIEWS]
+
+def review_cards():
+    out = []
+    for r in REVIEWS:
+        out.append(
+            '<div class="review">'
+            '<p class="stars" aria-label="5 av 5 stjärnor">★★★★★</p>'
+            '<p>”%s”</p>'
+            '<div class="who"><span class="avatar" style="background:%s">%s</span>'
+            '<span><b>%s</b><small>%s · %s</small></span></div>'
+            '</div>' % (r["text"], r["color"], r["name"][0], r["name"],
+                        r["job"], sv_date(r["date"])))
+    return "".join(out)
 FORM_ACTION = "https://formsubmit.co/" + EMAIL
 HAS_VIDEO = os.path.exists("assets/video.mp4")
 
@@ -32,6 +80,7 @@ def local_business():
         "sameAs": [IG],
         "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0",
                             "reviewCount": "15", "bestRating": "5"},
+        "review": reviews_schema(),
         "makesOffer": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Golvslipning", "url": DOMAIN + "/golvslipning.html"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Måleri och tapetsering", "url": DOMAIN + "/maleri-och-tapet.html"}},
@@ -396,21 +445,12 @@ def build_index():
   <div class="wrap">
     <p class="eyebrow">Omdömen</p>
     <h2>Vad kunderna <em>säger</em></h2>
+    <p class="section-lead">15 jobb via Servicefinder, snitt 5,0 av 5. Det här är vad de skrev.</p>
     <div class="reviews">
-      <div class="review">
-        <p>”Väldigt nöjd med slipning och behandling av mitt parkettgolv, det blev precis som jag hade hoppats på. Dessutom trevligt bemötande och bra kommunikation.”</p>
-        <div class="who"><span class="avatar" style="background:#4a6fa5">I</span><span><b>Ingrid</b><small>Servicefinder · ekparkett</small></span></div>
-      </div>
-      <div class="review">
-        <p>”Jag är jättenöjd med slipning och behandling av mitt furugolv samt trappor. De blev precis som jag hade tänkt mig.”</p>
-        <div class="who"><span class="avatar" style="background:#c07a34">A</span><span><b>Annika</b><small>Servicefinder · furugolv och trappor</small></span></div>
-      </div>
-      <div class="review">
-        <p>”Jäkligt duktiga och väldigt bra service fick man. Otroligt trevliga och hjälpsamma.”</p>
-        <div class="who"><span class="avatar" style="background:#3f8f5e">M</span><span><b>Mladen</b><small>Servicefinder · golv och målning</small></span></div>
-      </div>
+{review_cards()}
     </div>
-    <p class="reviews-note">Omdömena är hämtade från Servicefinder. Snitt 5,0 av 15 omdömen.</p>
+    <p class="reviews-note">Omdömena är hämtade från
+      <a href="{SERVICEFINDER}" rel="noopener" target="_blank">Servicefinder</a>, där du kan läsa alla 15.</p>
   </div>
 </section>
 
@@ -419,7 +459,8 @@ def build_index():
     <p class="eyebrow">Områden</p>
     <h2>Uddevalla och <em>Trestad</em></h2>
     <p class="section-lead">Vi utgår från Uddevalla och jobbar i Trestad — Uddevalla, Trollhättan och
-      Vänersborg — och i bygderna runtomkring. Är du osäker på om vi kommer till dig, ring och fråga.</p>
+      Vänersborg — och vidare längs Bohuslänskusten och uppåt Dalsland. Är du osäker på om vi kommer
+      till dig, ring och fråga.</p>
     <ul class="areas">{cities}</ul>
   </div>
 </section>
@@ -569,7 +610,7 @@ def build_microcement():
         ("Hur gör man rent microcement?",
          "Ljummet vatten och ett pH-neutralt rengöringsmedel, med mjuk mopp eller trasa. Undvik skurmedel, syra, ammoniak, klorin och slipande medel, och använd inte skurborste. Torka upp vin, kaffe och olja innan det ligger kvar."),
         ("Lägger ni microcement i Trollhättan och Vänersborg?",
-         f"Ja. Vi arbetar i Uddevalla, Trollhättan, Vänersborg och bygderna runtomkring — {', '.join(CITIES[3:])}. Ring om du är osäker på om vi kommer till dig."),
+         "Ja. Vi utgår från Uddevalla och arbetar i hela Trestad samt längs Bohuslänskusten och uppåt Dalsland. Ring om du är osäker på om vi kommer till dig."),
     ]
     faq_html = "".join('<details><summary>%s</summary><p>%s</p></details>' % (q, a) for q, a in faq)
 
