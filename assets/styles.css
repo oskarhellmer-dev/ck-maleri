@@ -103,11 +103,17 @@ h1 em,h2 em,h3 em{font-family:var(--serif);font-style:italic;font-weight:400;
 .hero-list li{position:relative;padding-left:26px;font-size:15.5px;color:#d8e8de}
 .hero-list li::before{content:"";position:absolute;left:0;top:.5em;width:12px;height:7px;
   border-left:2.5px solid #8fd6a8;border-bottom:2.5px solid #8fd6a8;transform:rotate(-45deg)}
+.hero-tag{font-family:var(--serif);font-style:italic;color:#8fd6a8;
+  font-size:clamp(1.35rem,2.7vw,2.05rem);line-height:1.2;margin:-10px 0 30px;letter-spacing:0}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
 .hero-card{justify-self:end;align-self:end;background:rgba(255,255,255,.97);color:var(--ink);
-  border-radius:14px;padding:18px 22px;max-width:290px;box-shadow:0 18px 44px rgba(0,0,0,.32)}
-.hero-card strong{display:block;font-size:15.5px;margin-bottom:5px}
-.hero-card span{font-size:14.4px;color:var(--muted);line-height:1.5}
+  border-radius:14px;padding:22px 24px;max-width:320px;box-shadow:0 18px 44px rgba(0,0,0,.34)}
+.hero-card strong{display:block;font-size:16.5px;margin-bottom:7px}
+.hero-card span{display:block;font-size:14.6px;color:var(--muted);line-height:1.55}
+.hero-card .btn{width:100%;margin-top:16px;padding:12px 18px;font-size:15.6px}
+.hero-card-link{display:block;text-align:center;margin-top:11px;font-size:14.4px;
+  color:var(--accent-dark);text-decoration:none;border-bottom:1.5px solid transparent}
+.hero-card-link:hover{border-bottom-color:var(--accent)}
 
 /* Trustrad */
 .trustbar{background:var(--pine-deep);color:#a9c4b4;font-size:14.5px}
