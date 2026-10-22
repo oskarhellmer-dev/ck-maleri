@@ -135,6 +135,8 @@ h1 em,h2 em,h3 em{font-family:var(--serif);font-style:italic;font-weight:400;
   transition:transform .18s,box-shadow .18s}
 .svc:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(17,26,21,.12)}
 .svc img{aspect-ratio:4/3;object-fit:cover;width:100%}
+/* stående foto: visa hela bilden, beskära så lite som möjligt */
+.svc img.tall{aspect-ratio:3/4}
 .svc-body{padding:22px 20px 24px;display:flex;flex-direction:column;flex:1}
 .svc-body p{font-size:15.3px;color:var(--ink-soft);margin:0 0 14px}
 .svc ul{list-style:none;margin:0 0 18px;padding:14px 0 0;border-top:1px solid var(--line)}
@@ -229,6 +231,7 @@ details a{color:var(--accent-dark)}
 .page-head h1{color:#fff;max-width:20ch}
 .page-head .lead{color:#cfe3d6;margin-bottom:0}
 .page-media{margin-top:-34px}
+.page-media img.tall{aspect-ratio:4/5;max-width:800px;margin:0 auto;display:block}
 .page-media img{border-radius:var(--radius);aspect-ratio:16/7;object-fit:cover;width:100%;
   box-shadow:0 20px 44px rgba(17,26,21,.16);border:6px solid var(--paper)}
 
