@@ -134,9 +134,8 @@ h1 em,h2 em,h3 em{font-family:var(--serif);font-style:italic;font-weight:400;
   overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;
   transition:transform .18s,box-shadow .18s}
 .svc:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(17,26,21,.12)}
-.svc img{aspect-ratio:4/3;object-fit:cover;width:100%}
-/* stående foto: visa hela bilden, beskära så lite som möjligt */
-.svc img.tall{aspect-ratio:3/4}
+/* tjänstekort: kvadratisk ram, jämna kort. Fotona beskärs så lite som möjligt */
+.svc img{aspect-ratio:1/1;object-fit:cover;width:100%}
 .svc-body{padding:22px 20px 24px;display:flex;flex-direction:column;flex:1}
 .svc-body p{font-size:15.3px;color:var(--ink-soft);margin:0 0 14px}
 .svc ul{list-style:none;margin:0 0 18px;padding:14px 0 0;border-top:1px solid var(--line)}
