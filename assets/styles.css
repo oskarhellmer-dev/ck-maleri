@@ -227,13 +227,17 @@ details a{color:var(--accent-dark)}
 .crumbs span{margin:0 8px;opacity:.5}
 
 /* Sidhuvud för undersidor */
-.page-head{background:var(--pine);color:#fff;padding:34px 0 60px}
+.page-head{position:relative;overflow:hidden;background:var(--pine);color:#fff;padding:34px 0 62px}
+.page-head-bg{position:absolute;inset:0;z-index:0}
+.page-head-bg img{width:100%;height:100%;object-fit:cover;display:block}
+.page-head-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(104deg,rgba(9,26,19,.94) 0%,rgba(9,26,19,.80) 46%,rgba(9,26,19,.40) 100%)}
+.page-head .wrap{position:relative;z-index:2}
 .page-head h1{color:#fff;max-width:20ch}
-.page-head .lead{color:#cfe3d6;margin-bottom:0}
-.page-media{margin-top:-34px}
-.page-media img.tall{aspect-ratio:4/5;max-width:800px;margin:0 auto;display:block}
-.page-media img{border-radius:var(--radius);aspect-ratio:16/7;object-fit:cover;width:100%;
-  box-shadow:0 20px 44px rgba(17,26,21,.16);border:6px solid var(--paper)}
+.page-head .lead{color:#dceee3;margin-bottom:0;max-width:58ch}
+.content-photo{margin:36px auto 0;max-width:660px}
+.content-photo img{width:100%;height:auto;display:block;border-radius:var(--radius);
+  border:1px solid var(--line);box-shadow:0 16px 36px rgba(17,26,21,.10)}
 
 /* Innehållslistor */
 .prose ul.checks{list-style:none;padding:0;margin:0 0 26px}
