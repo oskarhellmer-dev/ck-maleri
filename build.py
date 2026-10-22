@@ -12,6 +12,7 @@ PHONE_DISPLAY = "073-703 37 17"
 PHONE_LINK = "+46" + "737033717"
 EMAIL = "ckmaleri@gmail.com"
 IG = "https://www.instagram.com/ckmaleri/"
+FB = "https://www.facebook.com/p/CK-M%C3%A5leri-Golv-100068038089752/"
 IG_HANDLE = "@ckmaleri"
 AREA_SHORT = "Trestad · Fyrbodal"
 CITIES = ["Uddevalla", "Trollhättan", "Vänersborg", "Ljungskile", "Munkedal",
@@ -84,7 +85,7 @@ def local_business():
                     "addressRegion": "Västra Götalands län", "addressCountry": "SE"},
         "geo": {"@type": "GeoCoordinates", "latitude": "58.3494", "longitude": "11.9410"},
         "areaServed": [{"@type": "City", "name": c} for c in CITIES],
-        "sameAs": [IG],
+        "sameAs": [IG, FB],
         "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0",
                             "reviewCount": "15", "bestRating": "5"},
         "review": reviews_schema(),
