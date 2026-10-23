@@ -30,4 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }, { threshold: 0.15 }).observe(heroVideo);
   }
+
+  // Visa knappar i headern först när man scrollat förbi hero (minskar brus i toppen)
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var scrolled = function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 380);
+    };
+    scrolled();
+    window.addEventListener('scroll', scrolled, { passive: true });
+  }
 });
