@@ -340,10 +340,12 @@ details a{color:var(--accent-dark)}
   .hero{padding:0 0 64px;min-height:62vh}
   .hero-bg video,.hero-bg img{object-position:70% center}
   .svc-grid,.steps,.reviews,.facts,.footer-grid{grid-template-columns:1fr}
-  .gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  .gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -22px;padding:4px 22px 12px}
   .gallery::-webkit-scrollbar{display:none}
-  .gallery .fig{flex:0 0 85%;scroll-snap-align:start}
+  .gallery .fig{flex:0 0 72%;scroll-snap-align:start}
+  .gallery .fig img{aspect-ratio:16/10}
+  .gallery .fig figcaption{padding:10px 14px;font-size:13.2px}
   .hero-list{grid-template-columns:1fr}
   .cta-band{padding:32px 26px}
   .topbar{display:none}
