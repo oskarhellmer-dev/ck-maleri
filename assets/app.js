@@ -6,17 +6,34 @@ document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('nav');
   if (toggle && nav) {
+    var closeMenu = function () {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = 'Meny';
+      document.body.classList.remove('menu-open');
+    };
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.textContent = open ? 'Stäng' : 'Meny';
+      document.body.classList.toggle('menu-open', open);
     });
     nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A' && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Meny';
+      var a = e.target.closest('a');
+      if (a && nav.classList.contains('open')) {
+        var href = a.getAttribute('href') || '';
+        closeMenu();
+        // Scrolla till #kontakt smidigt om menyns offertknapp klickas
+        if (href === '#kontakt') {
+          e.preventDefault();
+          var target = document.getElementById('kontakt');
+          if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+          else { window.location.hash = '#kontakt'; }
+        }
       }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) closeMenu();
     });
   }
 
