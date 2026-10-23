@@ -344,7 +344,7 @@ details a{color:var(--accent-dark)}
     -webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -22px;padding:4px 22px 12px}
   .gallery::-webkit-scrollbar{display:none}
   .gallery .fig{flex:0 0 72%;scroll-snap-align:start}
-  .gallery .fig img{aspect-ratio:16/10}
+  .gallery .fig img{aspect-ratio:16/10;height:auto}
   .gallery .fig figcaption{padding:10px 14px;font-size:13.2px}
   .hero-list{grid-template-columns:1fr}
   .cta-band{padding:32px 26px}
