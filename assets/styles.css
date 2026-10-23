@@ -75,6 +75,7 @@ h1 em,h2 em,h3 em{font-family:var(--serif);font-style:italic;font-weight:400;
 .nav{margin-left:auto;display:flex;gap:17px;font-size:15px;align-items:center}
 .nav a{text-decoration:none;color:var(--ink-soft);padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
 .nav a:hover,.nav a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}
+.nav-cta{display:none}
 .header-cta{display:flex;align-items:center;gap:12px}
 .header-phone{font-weight:700;text-decoration:none;white-space:nowrap;font-size:15.5px}
 .header-cta .btn{padding:10px 18px;font-size:15px}
