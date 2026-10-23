@@ -322,9 +322,9 @@ details a{color:var(--accent-dark)}
 }
 @media (max-width:1000px){
   .nav-toggle{display:block}
-  .nav{display:none;position:fixed;inset:0;z-index:90;background:var(--paper);
+  .nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:90;background:var(--paper);
     flex-direction:column;gap:0;padding:92px 26px 30px;overflow-y:auto;
-    font-size:17.5px;box-shadow:none;border-bottom:none}
+    font-size:17.5px;box-shadow:none;border-bottom:none;min-height:100dvh;min-height:100vh}
   .nav.open{display:flex}
   .nav a{padding:13px 0;border-bottom:1px solid var(--line);width:100%;font-size:17.5px}
   .nav-cta{margin-top:auto;display:grid;gap:12px;padding-top:26px}
