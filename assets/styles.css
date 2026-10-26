@@ -104,6 +104,9 @@ h1 em,h2 em,h3 em{font-family:var(--serif);font-style:italic;font-weight:400;
 .hero-eyebrow{color:#b9d6c4}
 .hero h1{color:#fff;margin:6px 0 4px;font-size:clamp(2.9rem,6.2vw,5.1rem);
   line-height:1.02;letter-spacing:-.02em;font-weight:800;text-shadow:0 2px 30px rgba(0,0,0,.45)}
+.hero-title{font-weight:600}
+.hero-sub{color:#eaf3ec;font-size:clamp(1.05rem,2vw,1.35rem);font-weight:600;
+  letter-spacing:.02em;margin:0 0 18px;max-width:600px}
 .hero-tag{color:#fff;font-size:clamp(1.25rem,2.5vw,1.7rem);font-weight:500;
   line-height:1.4;margin:0 0 30px;max-width:600px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
