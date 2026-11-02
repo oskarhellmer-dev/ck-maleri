@@ -104,7 +104,7 @@ def patch_plat():
         "meta + og:description", f, expect=2)
     s = rep(s,
         "<p>Vi gör tätskikt enligt gällande regler och dokumenterar med bilder, så att du har papperen om något händer.",
-        '<p>Vi är <a href="https://www.gvk.se/" rel="noopener">GVK-auktoriserade</a>, vilket betyder att vi följer GVK:s branschregler för våtrum och att tätskiktsarbetet granskas av en oberoende kontrollant. Du får dokumentationen, så att du har papperen om något händer.',
+        '<p>Vi är <a href="https://www.gvk.se" rel="noopener nofollow" target="_blank">GVK-auktoriserade</a>, vilket betyder att vi följer GVK:s branschregler för våtrum och att tätskiktsarbetet granskas av en oberoende kontrollant. Du får dokumentationen, så att du har papperen om något händer.',
         "brödtext", f)
     s = rep(s,
         "<li>Tätskikt enligt reglerna, med bilddokumentation</li>",
