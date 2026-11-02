@@ -39,8 +39,8 @@ CITIES = {
         "file": "halden.html",
         "name": "Halden",
         "title": "Gulvsliper i Halden og Østfold | CK Måleri & Golv",
-        "desc": ("Vi er gulvslipere i Halden og Østfold. Sliper parkett, fiskebensparkett og gamle "
-                 "tregulv — støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
+        "desc": ("Vi sliper og legger parkett, fiskebensparkett og gamle tregulv i Halden og Østfold. "
+                 "Støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
         "h1": "Gulvsliping i Halden og Østfold",
         "hero_tag": ("Vi er gulvslipere fra Uddevalla. Skriftlig fastpris på forhånd, og vi kjører "
                      "over grensen til Halden med egne Bona-maskiner."),
@@ -68,8 +68,8 @@ CITIES = {
         "file": "sarpsborg.html",
         "name": "Sarpsborg",
         "title": "Gulvsliper i Sarpsborg og Østfold | CK Måleri & Golv",
-        "desc": ("Vi er gulvslipere i Sarpsborg og Østfold. Sliper parkett, fiskebensparkett og "
-                 "gamle tregulv — støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
+        "desc": ("Vi sliper og legger parkett, fiskebensparkett og gamle tregulv i Sarpsborg og Østfold. "
+                 "Støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
         "h1": "Gulvsliping i Sarpsborg og Østfold",
         "hero_tag": ("Vi er gulvslipere fra Uddevalla. Skriftlig fastpris på forhånd, og vi kjører "
                      "over grensen til Sarpsborg med egne Bona-maskiner."),
@@ -96,8 +96,8 @@ CITIES = {
         "file": "fredrikstad.html",
         "name": "Fredrikstad",
         "title": "Gulvsliper i Fredrikstad og Østfold | CK Måleri & Golv",
-        "desc": ("Vi er gulvslipere i Fredrikstad, Hvaler og Østfold. Sliper parkett og gamle "
-                 "tregulv — støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
+        "desc": ("Vi sliper og legger parkett og gamle tregulv i Fredrikstad, Hvaler og Østfold. "
+                 "Støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
         "h1": "Gulvsliping i Fredrikstad og Østfold",
         "hero_tag": ("Vi er gulvslipere fra Uddevalla. Skriftlig fastpris på forhånd, og vi kjører "
                      "over grensen til Fredrikstad og Hvaler med egne Bona-maskiner."),
@@ -126,9 +126,9 @@ ORDER = ["halden", "sarpsborg", "fredrikstad"]
 # ------------------------------------------------------------- generisk side
 GENERIC = {
     "file": "gulvsliping.html",
-    "title": "Gulvsliper og gulvsliping — pris og befaring | CK Måleri",
-    "desc": ("Vi er gulvslipere som sliper parkett, fiskebensparkett og gamle tregulv i Østfold. "
-             "Skriftlig fastpris etter gratis befaring. Se hva gulvsliping koster."),
+    "title": "Gulvsliper og gulvsliping — legging og pris | CK Måleri",
+    "desc": ("Vi sliper og legger parkett, fiskebensparkett og gamle tregulv i Østfold. Skriftlig "
+             "fastpris etter gratis befaring. Se hva gulvsliping og gulvlegging koster."),
     "h1": "Gulvsliper og gulvsliping i Østfold",
     "hero_big": "Gulvsliper",
     "hero_sub": "og gulvsliping i Østfold",
@@ -207,7 +207,8 @@ TOPIC = """<section class="section" id="gulvsliping">
     <h2>Gulvsliping, parkettsliping og <em>sliping av gamle tregulv</em></h2>
     <div class="prose">
       <p>En <b>gulvsliper</b> tar seg av det meste som har med tregulv å gjøre: <b>gulvsliping</b>,
-        <b>parkettsliping</b> og <b>sliping av parkett</b> og brede plankegulv. Kort fortalt sliper vi
+        <b>parkettsliping</b>, <b>sliping av parkett</b> og brede plankegulv — og <b>gulvlegging</b>,
+        det vil si å legge helt nytt tregulv. Kort fortalt sliper vi
         gulvet ned til rent tre og bygger overflaten opp igjen, slik at det ser nytt ut uten at du
         trenger å rive og legge nytt. For et hus med gamle furuplanker eller fiskebensparkett er det
         nesten alltid billigere å slipe enn å bytte.</p>
@@ -220,6 +221,11 @@ TOPIC = """<section class="section" id="gulvsliping">
         naturlig overflate som kan flekkskannes lokalt og passer i stue og soverom. <b>Pigment</b> kan
         gi gulvet en kaldere eller varmere tone, eller gjøre gammelt tre litt mørkere og jevnere i
         fargen.</p>
+      <p>Vi legger også ny parkett og fiskebensparkett — gulvlegging er en like naturlig del av jobben som
+        slipingen. Skal du legge parkett i et nytt rom, eller er det gamle gulvet gjennomslitt,
+        fuktskadet eller skal bygges om, legger vi nytt tregulv i stedet for å slipe, eller gjør begge
+        deler der bare en del av gulvet kan reddes. Da får du ett firma på hele gulvet, og en overflate
+        som møter seg selv i farge og høyde.</p>
       <p>Fordi vi sliper støysvakt og tilnærmet støvfritt, kan vi jobbe i hus som er i bruk mens vi
         holder på. Vi tar ofte etasje for etasje, eller rom for rom, så du kan bo hjemme mens gulvet
         blir slipt. Bruker du et svensk team i Østfold, får du også svensk prisnivå og en gunstig
@@ -246,6 +252,10 @@ def faq_pairs_generic():
          "Det er i praksis det samme arbeidet på to ulike navn. Parkettsliping brukes oftest om "
          "fiskebensparkett og tynnere parkett, mens gulvsliping dekker all sliping av tregulv, også "
          "brede plankegulv og furugulv. Metoden er den samme: ned til rent tre og så behandling."),
+        ("Legger dere også ny parkett, eller bare sliper dere?",
+         "Begge deler. Vi sliper og behandler eksisterende tregulv, og vi legger ny parkett og "
+         "fiskebensparkett der det gamle er utslitt eller skal bygges om. Du får én leverandør på hele "
+         "gulvet, enten det skal slipes eller legges nytt."),
         ("Bør jeg velge lakk eller olje?",
          "Lakk er mest slitesterkt og enkelt å tørke av, og passer best der det er mye trafikk, som i "
          "gang og kjøkken. Olje gir en matt, naturlig overflate som kan flekkskannes lokalt, og passer "
@@ -338,6 +348,9 @@ def faq_pairs(c):
         ("Kan mitt gamle tregulv eller parkettgulv reddes?",
          "Nesten alltid. Så lenge treet ikke er gjennomslitt eller fuktskadet, går det å slipe fram en "
          "frisk overflate. Er det ikke verdt pengene, sier vi det."),
+        ("Legger dere også nytt gulv, eller bare sliper dere?",
+         "Begge deler. Vi sliper og behandler eksisterende tregulv, og vi legger ny parkett og "
+         "fiskebensparkett der det gamle er utslitt eller skal bygges om."),
         ("Hvor lang tid tar det før dere kan starte i %s?" % c["name"],
          "Vi planlegger befaring raskt, som regel innen et par uker, og setter av sammenhengende dager "
          "til jobben så vi blir ferdige i én runde."),
@@ -381,11 +394,13 @@ SVC_FEATURE = {
     "href": "golvslipning.html",
     "img": "assets/img/tj-golv.webp",
     "alt": "Lyst ferdigslipet tregulv i et moderne kjøkken",
-    "h3": "Gulvsliping",
-    "body": ("Vi tar gulvet ned til rent tre, kontrollerer med lampe mellom hvert steg og legger valgt "
-             "overflate — lakk, olje eller pigment. Gamle gulv blir ofte bedre enn det du planla å kjøpe."),
-    "bullets": ["Parkett og fiskebensparkett", "Gamle tregulv og plankegulv",
-                "Lakk, olje eller pigment", "Støysvakt og nesten støvfritt"],
+    "h3": "Sliping og legging",
+    "body": ("Vi tar gulvet ned til rent tre og behandler det på nytt — eller legger helt nytt der det "
+             "gamle er utslitt. Vi kontrollerer med lampe mellom hvert steg og avslutter med lakk, olje "
+             "eller pigment. Gamle gulv blir ofte bedre enn det du planla å kjøpe."),
+    "bullets": ["Sliping av parkett og fiskebensparkett", "Legging av ny parkett og fiskebensparkett",
+                "Gamle tregulv og plankegulv", "Lakk, olje eller pigment",
+                "Støysvakt og nesten støvfritt"],
 }
 
 # Sekundære tjenester — bevisst nedtonet. Flislegging først, malerarbeid sist.
@@ -464,7 +479,7 @@ HERO = """<section class="hero">
     <div class="hero-copy">
       <p class="eyebrow hero-eyebrow">CK Måleri &amp; Golv · {hero_area} · Kun en drøy time via E6</p>
       <h1 class="hero-title">{hero_big}<span class="hero-title-sub">{hero_sub}</span></h1>
-      <p class="hero-sub">Sliping av parkett, fiskebensparkett og gamle tregulv</p>
+      <p class="hero-sub">Sliping og legging av parkett, fiskebensparkett og gamle tregulv</p>
       <p class="hero-tag">{hero_tag}</p>
       <div class="hero-cta">
         <a class="btn btn-primary btn-lg" href="#kontakt">Bestill gratis befaring <span class="arrow">→</span></a>
@@ -478,10 +493,11 @@ HERO = """<section class="hero">
 SERVICES = """<section class="section" id="tjenester">
   <div class="wrap">
     <p class="eyebrow">Det vi gjør best</p>
-    <h2>Spesialister på <em>sliping av tregulv og parkett</em></h2>
+    <h2>Spesialister på <em>sliping og legging av tregulv og parkett</em></h2>
     <p class="section-lead">Gamle furugulv, fiskebensparkett og slitt eikeparkett — vi sliper og behandler
-      til en overflate som holder. Sliping av parkett og gamle plankegulv er det vi gjør mest, med egne
-      Bona-maskiner, støysvakt og tilnærmet støvfritt. Skriftlig fastpris etter befaring i {city}.</p>
+      til en overflate som holder, eller legger helt nytt der det gamle er utslitt. Sliping og legging av
+      parkett og gamle plankegulv er det vi gjør mest, med egne Bona-maskiner, støysvakt og tilnærmet
+      støvfritt. Skriftlig fastpris etter befaring i {city}.</p>
     <div class="svc-grid svc-grid--floor">
 {feature}
 
@@ -899,7 +915,7 @@ def svc_feature():
         '          <h3>%s</h3>\n'
         '          <p>%s</p>\n'
         '          <ul>%s</ul>\n'
-        '          <span class="svc-more">Les om gulvsliping <span class="arrow">→</span></span>\n'
+        '          <span class="svc-more">Les mer <span class="arrow">→</span></span>\n'
         '        </div>\n'
         '      </a>' % (c["href"], c["img"], c["alt"], c["h3"], c["body"], li))
 
