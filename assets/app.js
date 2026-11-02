@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var y = document.getElementById('ar');
   if (y) y.textContent = new Date().getFullYear();
 
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Mobilmeny ---
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('nav');
   if (toggle && nav) {
@@ -23,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (a && nav.classList.contains('open')) {
         var href = a.getAttribute('href') || '';
         closeMenu();
-        // Scrolla till #kontakt smidigt om menyns offertknapp klickas
         if (href === '#kontakt') {
           e.preventDefault();
           var target = document.getElementById('kontakt');
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Pausa hero-videon när den är utanför bild (sparar batteri på mobil)
+  // --- Pausa hero-videon när den är utanför bild (sparar batteri på mobil) ---
   var heroVideo = document.querySelector('.hero-bg video');
   if (heroVideo && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
@@ -48,13 +50,74 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.15 }).observe(heroVideo);
   }
 
-  // Visa knappar i headern först när man scrollat förbi hero (minskar brus i toppen)
+  // --- Header: visa knappar först när man scrollat förbi hero.
+  //     rAF-throttlad så den aldrig körs en gång per frame.
   var header = document.querySelector('.site-header');
   if (header) {
-    var scrolled = function () {
+    var ticking = false;
+    var updateHeader = function () {
       header.classList.toggle('is-scrolled', window.scrollY > 380);
+      ticking = false;
     };
-    scrolled();
-    window.addEventListener('scroll', scrolled, { passive: true });
+    updateHeader();
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateHeader); }
+    }, { passive: true });
+  }
+
+  // --- Scroll-reveal: stig upp + tona in en gång när sektionen når bilden.
+  //     Läggs bara på element som redan är under folden, så inget blinkar i toppen.
+  if (!reduce && 'IntersectionObserver' in window) {
+    var targets = document.querySelectorAll('main .section, main > section, .svc, .review, .steps li, figure.fig, .cta-band');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    targets.forEach(function (el) {
+      if (el.getBoundingClientRect().top > window.innerHeight - 80) {
+        el.classList.add('reveal');
+        io.observe(el);
+      }
+    });
+  }
+
+  // --- Formulär: klientvalidering + laddningsläge (formsubmit.co postar som vanligt) ---
+  var form = document.querySelector('form.form-card');
+  if (form) {
+    var clearErr = function (field) {
+      field.removeAttribute('aria-invalid');
+      var e = field.parentNode.querySelector('.field-error');
+      if (e) e.remove();
+    };
+    var setErr = function (field, msg) {
+      field.setAttribute('aria-invalid', 'true');
+      var e = field.parentNode.querySelector('.field-error');
+      if (!e) { e = document.createElement('p'); e.className = 'field-error'; field.parentNode.appendChild(e); }
+      e.textContent = msg;
+    };
+    var validate = function () {
+      var firstBad = null;
+      form.querySelectorAll('input,select,textarea').forEach(function (f) {
+        if (f.type === 'hidden' || f.name === '_honey') return;
+        clearErr(f);
+        var val = (f.value || '').trim();
+        if (f.hasAttribute('required') && !val) {
+          setErr(f, 'Fyll i detta fält.'); firstBad = firstBad || f;
+        } else if (f.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+          setErr(f, 'Ange en giltig e-postadress.'); firstBad = firstBad || f;
+        }
+      });
+      return firstBad;
+    };
+    form.addEventListener('submit', function (e) {
+      var bad = validate();
+      if (bad) { e.preventDefault(); bad.focus(); return; }
+      var btn = form.querySelector('button[type="submit"], button');
+      if (btn) { btn.disabled = true; btn.textContent = 'Skickar…'; }
+    });
+    form.addEventListener('input', function (e) {
+      if (e.target && e.target.getAttribute('aria-invalid')) clearErr(e.target);
+    });
   }
 });
