@@ -38,12 +38,12 @@ CITIES = {
     "halden": {
         "file": "halden.html",
         "name": "Halden",
-        "title": "Gulvsliping i Halden og Østfold | CK Måleri & Golv",
-        "desc": ("Gulvsliping av parkett, fiskebensparkett og gamle tregulv i Halden og Østfold. "
-                 "Egne Bona-maskiner, støysvakt og nesten støvfritt. Gratis befaring og skriftlig fastpris."),
+        "title": "Gulvsliper i Halden og Østfold | CK Måleri & Golv",
+        "desc": ("Vi er gulvslipere i Halden og Østfold. Sliper parkett, fiskebensparkett og gamle "
+                 "tregulv — støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
         "h1": "Gulvsliping i Halden og Østfold",
-        "hero_tag": ("Vi sliper og behandler tregulv i hele Halden-området. Du får skriftlig fastpris "
-                     "på forhånd, og vi kjører over grensen fra Uddevalla med egne Bona-maskiner."),
+        "hero_tag": ("Vi er gulvslipere fra Uddevalla. Skriftlig fastpris på forhånd, og vi kjører "
+                     "over grensen til Halden med egne Bona-maskiner."),
         "areas": ["Halden", "Tistedal", "Idd", "Svinesund", "Rokke", "Asak", "Sponvika", "Berg"],
         "local_h": "Gulvsliping i Halden og omegn",
         "local_p": [
@@ -52,33 +52,41 @@ CITIES = {
             "Nettopp i den typen hus finner vi gulvene som er mest verdt å ta vare på: brede furuplanker, "
             "gammel fiskebensparkett og slitte parkettgulv som har fått tjue år med møbler og barneføtter.",
             "Vi sliper og behandler tregulv i hele Halden kommune — fra sentrum og Tistedal til Idd, "
-            "Rokke, Asak og Sponvika — og tar også malerarbeid, mikrosement på bad og flislegging. "
-            "Fordi vi kjører over grensen fra Uddevalla har vi med egne Bona-maskiner og alt materiell, "
-            "så jobben går i ett.",
-            "Er du usikker på om det gamle gulvet er verdt å redde, sender du bare noen bilder. Vi sier "
-            "ærlig fra hvis det ikke lønner seg — og kommer på gratis befaring i Halden når det passer deg.",
+            "Rokke, Asak og Sponvika. Parkettsliping og sliping av brede plankegulv er det vi gjør mest, "
+            "men vi tar også malerarbeid, mikrosement på bad og flislegging. Fordi vi kjører over grensen "
+            "fra Uddevalla har vi alltid med egne Bona-maskiner og alt materiell, så jobben går i ett.",
+            "Mange av husene her er gamle, og da er det sjelden lurt å legge nytt gulv oppå det gamle. Et "
+            "tregulv som har ligget i femti år er tørrere og mer stabilt enn det meste du får kjøpt i dag — "
+            "det trenger bare å bli slipt ned til rent tre og behandlet på nytt. Ser vi at gulvet ikke er "
+            "verdt å redde, sier vi det før vi begynner.",
+            "Står du med et gammelt gulv og vurderer å leie inn gulvsliper, sender du bare noen bilder. Du "
+            "får et realistisk anslag med en gang — og vi kommer på gratis befaring i Halden når det passer "
+            "deg.",
         ],
     },
     "sarpsborg": {
         "file": "sarpsborg.html",
         "name": "Sarpsborg",
-        "title": "Gulvsliping i Sarpsborg og Østfold | CK Måleri & Golv",
-        "desc": ("Gulvsliping av parkett, fiskebensparkett og gamle tregulv i Sarpsborg og Østfold. "
-                 "Egne Bona-maskiner, støysvakt og nesten støvfritt. Gratis befaring og skriftlig fastpris."),
+        "title": "Gulvsliper i Sarpsborg og Østfold | CK Måleri & Golv",
+        "desc": ("Vi er gulvslipere i Sarpsborg og Østfold. Sliper parkett, fiskebensparkett og "
+                 "gamle tregulv — støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
         "h1": "Gulvsliping i Sarpsborg og Østfold",
-        "hero_tag": ("Vi sliper og behandler tregulv i hele Sarpsborg-området. Du får skriftlig fastpris "
-                     "på forhånd, og vi kjører over grensen fra Uddevalla med egne Bona-maskiner."),
+        "hero_tag": ("Vi er gulvslipere fra Uddevalla. Skriftlig fastpris på forhånd, og vi kjører "
+                     "over grensen til Sarpsborg med egne Bona-maskiner."),
         "areas": ["Sarpsborg", "Grålum", "Borgenhaugen", "Skjeberg", "Hafslund", "Greåker", "Varteig", "Hafslundsøy"],
         "local_h": "Gulvsliping i Sarpsborg og omegn",
         "local_p": [
-            "Sarpsborg har både eldre villaer og nyere blokker, og gulvene varierer deretter. I områder "
-            "som Grålum, Borgenhaugen og Hafslund møter vi mye 90-tallsparkett som er slitt, mens de "
-            "eldre husene i Skjeberg og Varteig ofte har brede tregulv som bare trenger å bli slipt fram "
-            "igjen.",
+            "Sarpsborg er fylkessete i Østfold og har både eldre villaer og nyere blokker — og gulvene "
+            "varierer deretter. I områder som Grålum, Borgenhaugen og Hafslund møter vi mye 90-tallsparkett "
+            "som er slitt, mens de eldre husene i Skjeberg og Varteig ofte har brede tregulv som bare "
+            "trenger å bli slipt fram igjen.",
             "Vi tar hele Sarpsborg kommune — sentrum, Grålum, Borgenhaugen, Skjeberg, Hafslund, Greåker "
-            "og Varteig — med gulvsliping, innvendig og utvendig malerarbeid, mikrosement og flislegging. "
-            "Siden vi kommer fra Uddevalla over grensen, har vi med egne maskiner og gjør alt selv, uten "
-            "å leie inn underleverandører.",
+            "og Varteig. Parkettsliping og sliping av gamle gulv er det vi gjør mest, men vi utfører også "
+            "innvendig og utvendig malerarbeid, mikrosement og flislegging. Siden vi kommer fra Uddevalla "
+            "over grensen, har vi med egne maskiner og gjør alt selv, uten å leie inn underleverandører.",
+            "Den vanligste jobben her er en leilighet eller et hus der parketten har mistet glansen og "
+            "blitt ripete i gangen, men egentlig er helt fin å redde. Da sliper vi ned, behandler, og du "
+            "har et gulv som ser nytt ut — til en brøkdel av prisen for nytt gulv.",
             "Skal leiligheten friskes opp før salg, eller skal hele huset gjøres om? Send noen bilder og "
             "antall kvadratmeter, så får du et realistisk anslag allerede på telefon — og en skriftlig "
             "fastpris etter gratis befaring i Sarpsborg.",
@@ -87,12 +95,12 @@ CITIES = {
     "fredrikstad": {
         "file": "fredrikstad.html",
         "name": "Fredrikstad",
-        "title": "Gulvsliping i Fredrikstad og Østfold | CK Måleri & Golv",
-        "desc": ("Gulvsliping av parkett, fiskebensparkett og gamle tregulv i Fredrikstad, Hvaler og "
-                 "Østfold. Egne Bona-maskiner, støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
+        "title": "Gulvsliper i Fredrikstad og Østfold | CK Måleri & Golv",
+        "desc": ("Vi er gulvslipere i Fredrikstad, Hvaler og Østfold. Sliper parkett og gamle "
+                 "tregulv — støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
         "h1": "Gulvsliping i Fredrikstad og Østfold",
-        "hero_tag": ("Vi sliper og behandler tregulv i hele Fredrikstad og på Hvaler. Du får skriftlig "
-                     "fastpris på forhånd, og vi kjører over grensen fra Uddevalla med egne Bona-maskiner."),
+        "hero_tag": ("Vi er gulvslipere fra Uddevalla. Skriftlig fastpris på forhånd, og vi kjører "
+                     "over grensen til Fredrikstad og Hvaler med egne Bona-maskiner."),
         "areas": ["Fredrikstad", "Kråkerøy", "Gressvik", "Begby", "Rolvsøy", "Onsøy", "Hvaler", "Cicignon"],
         "local_h": "Gulvsliping i Fredrikstad og på Hvaler",
         "local_p": [
@@ -104,6 +112,10 @@ CITIES = {
             "Vi jobber i hele Fredrikstad og på Hvaler — også Onsøy og øyene — med gulvsliping, "
             "malerarbeid, mikrosement og flislegging. Kysten betyr mange hytter og fritidsboliger, og der "
             "er det ofte et slitent tregulv eller et bad som skal tåle fukt. Det tar vi oss av.",
+            "I Gamlebyen og på Kråkerøy ligger det mange gamle plankegulv med bredder som ikke lages "
+            "lenger. De er verdt å ta vare på, og med riktig parkettsliping og behandling holder de i "
+            "flere tiår til. Hyttene på Hvaler har ofte gulv som har stått tomme og tørket ut — det fikser "
+            "vi med sliping og olje eller lakk.",
             "Vi kjører opp fra Uddevalla via E6 og Svinesund med egne Bona-maskiner, og gjør jobben selv "
             "fra start til slutt. Noen bilder og cirka antall kvadratmeter er nok for et første anslag.",
         ],
@@ -301,8 +313,8 @@ SERVICES = """<section class="section" id="tjenester">
     <p class="eyebrow">Det vi gjør best</p>
     <h2>Spesialister på <em>sliping av tregulv og parkett</em></h2>
     <p class="section-lead">Gamle furugulv, fiskebensparkett og slitt eikeparkett — vi sliper og behandler
-      til en overflate som holder. Egne Bona-maskiner, støysvakt og tilnærmet støvfritt, og skriftlig
-      fastpris etter befaring i {city}.</p>
+      til en overflate som holder. Sliping av parkett og gamle plankegulv er det vi gjør mest, med egne
+      Bona-maskiner, støysvakt og tilnærmet støvfritt. Skriftlig fastpris etter befaring i {city}.</p>
     <div class="svc-grid svc-grid--floor">
 {feature}
 
