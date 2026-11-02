@@ -252,6 +252,14 @@ figure.fig figcaption b{color:var(--ink);font-weight:650}
   display:grid;place-items:center;font-weight:700;margin-bottom:var(--sp-4);font-size:var(--fs-base)}
 .steps p{font-size:var(--fs-md);color:var(--ink-soft);margin:0}
 
+/* Tagline — stor mening som egens moment, ord tänds ett och ett vid scroll */
+.tagline{padding:var(--sp-20) 0}
+.tagline .tagline-text{font-size:clamp(1.6rem,3.3vw,2.5rem);font-weight:600;line-height:1.28;
+  letter-spacing:-.02em;color:#fff;max-width:680px;margin:0;text-wrap:balance}
+.tagline .word{color:rgba(255,255,255,.26);transition:color .5s var(--ease)}
+.tagline .word.on{color:#fff}
+@media (prefers-reduced-motion:reduce){.tagline .word{transition:none;color:#fff}}
+
 /* Omdömen */
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5)}
 .review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-6)}

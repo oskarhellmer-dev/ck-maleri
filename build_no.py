@@ -18,7 +18,7 @@ NAME        = "CK Måleri & Golv"
 PHONE_LINK  = "+46737033717"
 PHONE_PRETTY = "+46 73 703 37 17"
 EMAIL       = "ckmaleri@gmail.com"
-CSS_V       = "9"
+CSS_V       = "10"
 STREET      = "Föreningsgatan 12"
 POSTAL      = "451 52"
 LOCALITY    = "Uddevalla"
@@ -122,6 +122,173 @@ CITIES = {
     },
 }
 ORDER = ["halden", "sarpsborg", "fredrikstad"]
+
+# ------------------------------------------------------------- generisk side
+GENERIC = {
+    "file": "gulvsliping.html",
+    "title": "Gulvsliper og gulvsliping — pris og befaring | CK Måleri",
+    "desc": ("Vi er gulvslipere som sliper parkett, fiskebensparkett og gamle tregulv i Østfold. "
+             "Skriftlig fastpris etter gratis befaring. Se hva gulvsliping koster."),
+    "h1": "Gulvsliper og gulvsliping i Østfold",
+    "hero_big": "Gulvsliper",
+    "hero_sub": "og gulvsliping i Østfold",
+    "hero_area": "Gulvsliping i hele Østfold",
+    "hero_tag": ("Skriftlig fastpris på forhånd, og vi kjører over grensen med egne Bona-maskiner. "
+                 "Send et par bilder, så får du et realistisk anslag med en gang."),
+    "why_place": "Østfold",
+}
+
+NAV_CITY = ('<a href="#tjenester">Tjenester</a><a href="#prosjekter">Prosjekter</a>'
+            '<a href="#hvorfor">Hvorfor oss</a><a href="#ostfold">Østfold</a>'
+            '<a href="#faq">Spørsmål</a><a href="#kontakt">Kontakt</a>')
+NAV_GEN = ('<a href="#tjenester">Tjenester</a><a href="#slik">Slik gjør vi det</a>'
+           '<a href="#pris">Pris</a><a href="#prosjekter">Prosjekter</a>'
+           '<a href="#faq">Spørsmål</a><a href="#kontakt">Kontakt</a>')
+
+TAGLINE = """<section class="section section-pine tagline">
+  <div class="wrap">
+    <p class="tagline-text" data-tagline>Et gammelt tregulv er sjelden noe du bør bytte. Som regel
+      handler det bare om å slipe det ned til rent tre og behandle det på nytt.</p>
+  </div>
+</section>"""
+
+STEPS = """<section class="section" id="slik">
+  <div class="wrap">
+    <p class="eyebrow">Slik gjør vi det</p>
+    <h2>Fra et bilde til <em>ferdig gulv</em> i tre steg</h2>
+    <p class="section-lead">Du trenger ikke vite hva gulvet ditt heter eller hvor mye som må slipes.
+      Send et par bilder, så tar vi resten.</p>
+    <ol class="steps">
+{steps}
+    </ol>
+  </div>
+</section>"""
+
+STEPS_ITEMS = [
+    ("Send bilder og cirka antall kvadratmeter",
+     "Ta et par bilder av gulvet og skriv omtrent hvor mange kvadratmeter det gjelder. "
+     "Da får du et realistisk anslag med en gang, helt uforpliktende."),
+    ("Gratis befaring og skriftlig fastpris",
+     "Vi kommer hjem til deg, vurderer tregulvets tilstand og hva som må gjøres, og gir deg en "
+     "skriftlig fastpris før vi begynner. Ingen skjulte tillegg etterpå."),
+    ("Sliping og behandling, så rydding",
+     "Vi sliper ned til rent tre, kontrollerer underveis med lampe, og legger den overflaten du har "
+     "valgt. Til slutt støvsuger, vasker og rydder vi etter oss."),
+]
+
+PRICE = """<section class="section section-alt" id="pris">
+  <div class="wrap narrow">
+    <p class="eyebrow">Pris</p>
+    <h2>Hva koster <em>gulvsliping</em>?</h2>
+    <p class="section-lead">Vi gir ingen ferdig pris på nett, fordi to gulv sjelden er like. Men du
+      skal alltid vite hva det koster før vi begynner.</p>
+    <div class="price-box">
+      <p><b>Du får alltid skriftlig fastpris etter en gratis befaring.</b> Ingen skjulte tillegg for
+        reise, bompenger eller materiell etter at prisen er avtalt.</p>
+      <p class="price-cta"><a href="#kontakt">Be om gratis befaring og fastpris <span class="arrow">→</span></a></p>
+    </div>
+    <div class="prose">
+      <p>Prisen på gulvsliping settes etter fire ting:</p>
+      <ul class="checks">
+        <li><b>Antall kvadratmeter.</b> Større flater gir lavere pris per kvadratmeter.</li>
+        <li><b>Tregulvets tilstand.</b> Et gulv som må slipes hardt ned koster mer enn et som bare trenger en lett overhaling.</li>
+        <li><b>Gulvtype.</b> Fiskebensparkett og brede plankegulv tar lengre tid enn standard parkett.</li>
+        <li><b>Behandling.</b> Lakk, olje eller pigment påvirker både pris og hvor slitesterkt gulvet blir.</li>
+      </ul>
+      <p>Vil du ha et presist tall, tar du et par bilder og skriver cirka antall kvadratmeter. Da får du
+        et realistisk anslag allerede på telefon, og en skriftlig fastpris etter befaring i Østfold.</p>
+    </div>
+  </div>
+</section>"""
+
+TOPIC = """<section class="section" id="gulvsliping">
+  <div class="wrap narrow">
+    <p class="eyebrow">Om gulvsliping</p>
+    <h2>Gulvsliping, parkettsliping og <em>sliping av gamle tregulv</em></h2>
+    <div class="prose">
+      <p>En <b>gulvsliper</b> tar seg av det meste som har med tregulv å gjøre: <b>gulvsliping</b>,
+        <b>parkettsliping</b> og <b>sliping av parkett</b> og brede plankegulv. Kort fortalt sliper vi
+        gulvet ned til rent tre og bygger overflaten opp igjen, slik at det ser nytt ut uten at du
+        trenger å rive og legge nytt. For et hus med gamle furuplanker eller fiskebensparkett er det
+        nesten alltid billigere å slipe enn å bytte.</p>
+      <p>Vi begynner med å vurdere gulvet: hvor slitt det er, hvor dypt ripene går, og om treet er
+        gjennomslitt eller fuktskadet. Så sliper vi i flere trinn med stadig finere papir, og
+        kontrollerer med lampe mellom hvert steg. Er gulvet ikke verdt å redde, sier vi det før vi
+        begynner i stedet for å ta jobben likevel.</p>
+      <p>Når treet er rent, velger vi behandling etter hvordan rommet brukes. <b>Lakk</b> gir en
+        slitesterk, lett å tørke av overflate som passer i gang og kjøkken. <b>Olje</b> gir en matt,
+        naturlig overflate som kan flekkskannes lokalt og passer i stue og soverom. <b>Pigment</b> kan
+        gi gulvet en kaldere eller varmere tone, eller gjøre gammelt tre litt mørkere og jevnere i
+        fargen.</p>
+      <p>Fordi vi sliper støysvakt og tilnærmet støvfritt, kan vi jobbe i hus som er i bruk mens vi
+        holder på. Vi tar ofte etasje for etasje, eller rom for rom, så du kan bo hjemme mens gulvet
+        blir slipt. Bruker du et svensk team i Østfold, får du også svensk prisnivå og en gunstig
+        kronekurs på toppen.</p>
+    </div>
+    <p class="section-lead" style="margin:26px 0 0">Vi sliper tregulv i hele Østfold: {city_links}.</p>
+  </div>
+</section>"""
+
+
+def faq_pairs_generic():
+    return [
+        ("Hva koster gulvsliping per kvadratmeter?",
+         "Det avhenger av tregulvets tilstand, hvor mye som må slipes ned og hvilken behandling du "
+         "velger. Du får et realistisk anslag på telefon, og en skriftlig fastpris etter en gratis "
+         "befaring. Slik vet du nøyaktig hva jobben koster før vi starter."),
+        ("Koster det noe å få dere på befaring?",
+         "Nei, befaring og pristilbud er helt gratis og uforpliktende. Vurderer du å slipe gulvet, "
+         "kommer vi hjem til deg og ser på det uten at det koster noe."),
+        ("Kan gamle tregulv og parkettgulv reddes?",
+         "Nesten alltid. Så lenge treet ikke er gjennomslitt eller fuktskadet, går det å slipe fram en "
+         "frisk overflate. Er gulvet likevel ikke verdt pengene, sier vi det før vi begynner."),
+        ("Hva er forskjellen på parkettsliping og gulvsliping?",
+         "Det er i praksis det samme arbeidet på to ulike navn. Parkettsliping brukes oftest om "
+         "fiskebensparkett og tynnere parkett, mens gulvsliping dekker all sliping av tregulv, også "
+         "brede plankegulv og furugulv. Metoden er den samme: ned til rent tre og så behandling."),
+        ("Bør jeg velge lakk eller olje?",
+         "Lakk er mest slitesterkt og enkelt å tørke av, og passer best der det er mye trafikk, som i "
+         "gang og kjøkken. Olje gir en matt, naturlig overflate som kan flekkskannes lokalt, og passer "
+         "i stue og soverom. Vi hjelper deg å velge ut fra hvordan rommet brukes."),
+        ("Blir det mye støv når dere sliper?",
+         "Vi sliper støysvakt og tilnærmet støvfritt med egne Bona-maskiner, og støvsuger og rydder "
+         "etter oss. Vi kan jobbe rom for rom, så du kan bo hjemme mens jobben pågår."),
+        ("Hvor lang tid tar en gulvsliping?",
+         "En vanlig stue eller leilighet på rundt 40 til 60 kvadratmeter tar som regel en til to dager, "
+         "avhengig av tilstand og behandling. Vi setter av sammenhengende dager, så vi blir ferdige i "
+         "én runde."),
+        ("Hvilke områder jobber dere i?",
+         "Vi holder til i Uddevalla og kjører over grensen til hele Østfold: Halden, Sarpsborg, "
+         "Fredrikstad og Hvaler, inkludert Tistedal, Skjeberg, Kråkerøy og Onsøy. Vi er hos deg på "
+         "rundt en time via E6 og Svinesund."),
+    ]
+
+
+def faq_schema_generic():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q,
+             "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in faq_pairs_generic()
+        ],
+    }
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+
+
+def faq_html_generic():
+    return "".join("<details><summary>%s</summary><p>%s</p></details>" % (q, a)
+                   for q, a in faq_pairs_generic())
+
+
+def steps_html():
+    out = []
+    for i, (h, p) in enumerate(STEPS_ITEMS, 1):
+        out.append('      <li><span class="step-num">%d</span><h3>%s</h3><p>%s</p></li>'
+                   % (i, h, p))
+    return "\n".join(out)
+
 
 # ------------------------------------------------------------------ skjema
 def local_business(c):
@@ -257,7 +424,7 @@ USP = [
     ("Svensk prisnivå og skriftlig fastpris",
      "Konkurransedyktige priser og en gunstig kronekurs — alltid med skriftlig fastpris etter befaring."),
     ("Kort vei via E6",
-     "Vi kjører rett opp E6 over Svinesund og er i {city} på rundt en time for gratis befaring."),
+     "Vi kjører rett opp E6 over Svinesund og er hos deg på rundt en time for gratis befaring."),
     ("Over 15 års erfaring og egne Bona-maskiner",
      "Støysvak og tilnærmet støvfri sliping."),
     ("Én kontaktperson hele veien",
@@ -281,7 +448,7 @@ HEADER = """<header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="./"><img class="brand-logo" src="assets/img/logo.webp" alt="CK Måleri &amp; Golv" width="1400" height="582"></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Meny</button>
-    <nav class="nav" id="nav" aria-label="Hovedmeny"><a href="#tjenester">Tjenester</a><a href="#prosjekter">Prosjekter</a><a href="#hvorfor">Hvorfor oss</a><a href="#ostfold">Østfold</a><a href="#faq">Spørsmål</a><a href="#kontakt">Kontakt</a><div class="nav-cta"><a class="btn btn-primary" href="#kontakt">Bestill gratis befaring <span class="arrow">→</span></a><a class="btn btn-outline nav-cta-call" href="tel:{phone_link}">Ring {phone_pretty}</a></div></nav>
+    <nav class="nav" id="nav" aria-label="Hovedmeny">{nav_links}<div class="nav-cta"><a class="btn btn-primary" href="#kontakt">Bestill gratis befaring <span class="arrow">→</span></a><a class="btn btn-outline nav-cta-call" href="tel:{phone_link}">Ring {phone_pretty}</a></div></nav>
     <div class="header-cta">
       <a class="header-phone" href="tel:{phone_link}">{phone_pretty}</a>
       <a class="btn btn-primary" href="#kontakt">Bestill befaring</a>
@@ -295,8 +462,8 @@ HERO = """<section class="hero">
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow hero-eyebrow">CK Måleri &amp; Golv · {city} og Østfold · Kun en drøy time via E6</p>
-      <h1 class="hero-title">Gulvsliping<span class="hero-title-sub">i {city} og Østfold</span></h1>
+      <p class="eyebrow hero-eyebrow">CK Måleri &amp; Golv · {hero_area} · Kun en drøy time via E6</p>
+      <h1 class="hero-title">{hero_big}<span class="hero-title-sub">{hero_sub}</span></h1>
       <p class="hero-sub">Sliping av parkett, fiskebensparkett og gamle tregulv</p>
       <p class="hero-tag">{hero_tag}</p>
       <div class="hero-cta">
@@ -330,7 +497,7 @@ WHY = """<section class="section section-pine" id="hvorfor">
   <div class="wrap two-col">
     <div>
       <p class="eyebrow">Hvorfor oss</p>
-      <h2>Hvorfor velge et <em>svensk team</em> i {city} og Østfold?</h2>
+      <h2>Hvorfor velge et <em>svensk team</em> i {why_place}?</h2>
       <p class="section-lead">Vi er ikke størst. Vi er de som tar jobben, gjør den selv og svarer når du ringer.</p>
     </div>
     <dl class="facts">
@@ -438,6 +605,7 @@ FOOTER = """<footer class="site-footer">
       <a href="halden.html">Halden</a>
       <a href="sarpsborg.html">Sarpsborg</a>
       <a href="fredrikstad.html">Fredrikstad</a>
+      <a href="gulvsliping.html">Gulvsliping og pris</a>
       <a href="index.html">Uddevalla og Trestad</a>
     </div>
     <div class="footer-col">
@@ -540,6 +708,143 @@ TAKK_PAGE = """<!DOCTYPE html>
 """
 
 
+GENERIC_PAGE = """<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{canonical}">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="CK Måleri &amp; Golv">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{og_image}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16382c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css?v={css_v}">
+<script type="application/ld+json">{schema}</script>
+<script type="application/ld+json">{faq_schema}</script>
+</head>
+<body>
+<a class="skip" href="#main">Hopp til innhold</a>
+{topbar}
+{header}
+
+<main id="main">
+{hero}
+
+{services}
+
+{tagline}
+
+{steps}
+
+{price}
+
+{gallery}
+
+{why}
+
+{topic}
+
+{faq_section}
+
+{contact}
+</main>
+{footer}
+<script src="assets/app.js?v={css_v}" defer></script>
+</body>
+</html>
+"""
+
+
+def local_business_generic():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": DOMAIN + "/" + GENERIC["file"] + "#business",
+        "name": NAME,
+        "url": DOMAIN + "/" + GENERIC["file"],
+        "image": OG_IMAGE,
+        "description": ("Gulvsliping, parkettsliping og sliping av gamle tregulv i hele Østfold — "
+                        "utført av CK Måleri & Golv fra Uddevalla, med over 15 års erfaring."),
+        "telephone": PHONE_LINK,
+        "email": EMAIL,
+        "priceRange": "Fastpris etter befaring",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": STREET,
+            "postalCode": POSTAL,
+            "addressLocality": LOCALITY,
+            "addressCountry": COUNTRY,
+        },
+        "areaServed": [
+            {"@type": "AdministrativeArea", "name": "Østfold"},
+            {"@type": "City", "name": "Halden"},
+            {"@type": "City", "name": "Sarpsborg"},
+            {"@type": "City", "name": "Fredrikstad"},
+            {"@type": "City", "name": "Hvaler"},
+        ],
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:00", "closes": "20:00",
+        }],
+        "sameAs": [INSTAGRAM, FACEBOOK],
+        "parentOrganization": {"@type": "Organization", "name": NAME, "url": DOMAIN + "/"},
+    }
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+
+
+def areas_links_generic():
+    return " | ".join('<a href="%s">%s</a>' % (CITIES[k]["file"], CITIES[k]["name"]) for k in ORDER)
+
+
+def build_generic():
+    g = GENERIC
+    common = dict(
+        phone_link=PHONE_LINK, phone_pretty=PHONE_PRETTY, email=EMAIL,
+        phone_svg15=PHONE_SVG.format(s=15), phone_svg17=PHONE_SVG.format(s=17),
+        css_v=CSS_V, domain=DOMAIN, og_image=OG_IMAGE,
+        street=STREET, postal=POSTAL, locality=LOCALITY,
+        instagram=INSTAGRAM, facebook=FACEBOOK, nav_links=NAV_GEN,
+    )
+    kw = dict(common)
+    kw.update(dict(
+        title=g["title"], desc=g["desc"], canonical=DOMAIN + "/" + g["file"],
+        schema=local_business_generic(), faq_schema=faq_schema_generic(),
+    ))
+    footer = fmt(FOOTER, **common)
+    # På den generiske siden markerer vi den som gjeldende i stedet for å lenke til seg selv.
+    footer = footer.replace('<a href="gulvsliping.html">Gulvsliping og pris</a>',
+                            '<b>Gulvsliping og pris</b>')
+    kw.update(dict(
+        topbar=fmt(TOPBAR, **common),
+        header=fmt(HEADER, **common),
+        footer=footer,
+        hero=fmt(HERO, hero_area=g["hero_area"], hero_big=g["hero_big"],
+                 hero_sub=g["hero_sub"], hero_tag=g["hero_tag"],
+                 phone_link=PHONE_LINK, phone_pretty=PHONE_PRETTY,
+                 phone_svg17=PHONE_SVG.format(s=17)),
+        services=fmt(SERVICES, city="Østfold", feature=svc_feature(), secondary=svc_mini()),
+        tagline=TAGLINE,
+        steps=fmt(STEPS, steps=steps_html()),
+        price=PRICE,
+        gallery=fmt(GALLERY_HTML, figs=gallery_figs()),
+        why=fmt(WHY, why_place=g["why_place"], facts=usp_dl(None)),
+        topic=fmt(TOPIC, city_links=areas_links_generic()),
+        faq_section=fmt(FAQ, faq=faq_html_generic()),
+        contact=fmt(CONTACT, **common, city="Østfold"),
+    ))
+    return fmt(GENERIC_PAGE, **kw)
+
+
 def fmt(html, **kw):
     return html.format(**kw)
 
@@ -552,13 +857,17 @@ def build_page(key):
         phone_svg15=PHONE_SVG.format(s=15), phone_svg17=PHONE_SVG.format(s=17),
         css_v=CSS_V, domain=DOMAIN, og_image=OG_IMAGE,
         street=STREET, postal=POSTAL, locality=LOCALITY,
-        instagram=INSTAGRAM, facebook=FACEBOOK,
+        instagram=INSTAGRAM, facebook=FACEBOOK, nav_links=NAV_CITY,
     )
     kw = dict(common)
     kw.update(dict(
         title=c["title"], desc=c["desc"], canonical=DOMAIN + "/" + c["file"],
         schema=local_business(c), faq_schema=faq_schema(c),
         city=c["name"], h1=c["h1"], hero_tag=c["hero_tag"],
+        hero_big="Gulvsliping",
+        hero_sub="i %s og Østfold" % c["name"],
+        hero_area="%s og Østfold" % c["name"],
+        why_place="%s og Østfold" % c["name"],
     ))
     kw.update(dict(
         topbar=fmt(TOPBAR, **common),
@@ -570,7 +879,7 @@ def build_page(key):
         hero=fmt(HERO, **kw),
         services=fmt(SERVICES, city=c["name"], feature=svc_feature(), secondary=svc_mini()),
         gallery=fmt(GALLERY_HTML, figs=gallery_figs()),
-        why=fmt(WHY, city=c["name"], facts=usp_dl(c["name"])),
+        why=fmt(WHY, why_place="%s og Østfold" % c["name"], facts=usp_dl(c["name"])),
         local=fmt(LOCAL, local_h=c["local_h"],
                   local_p="\n".join("      <p>%s</p>" % p for p in c["local_p"]),
                   city_links=areas_links(c)),
@@ -669,17 +978,41 @@ def patch_swedish_footers():
         write(fn, s)
 
 
+def patch_swedish_gulvsliping():
+    files = ["index.html", "golvslipning.html", "maleri-och-tapet.html", "microcement.html",
+             "plattsattning.html", "404.html", "integritetspolicy.html", "tack.html"]
+    anchor = '      <a href="fredrikstad.html">Fredrikstad</a>'
+    add = anchor + '\n      <a href="gulvsliping.html">Gulvsliping i Østfold</a>'
+    for fn in files:
+        if not os.path.exists(fn):
+            continue
+        s = io.open(fn, encoding="utf-8").read()
+        if 'href="gulvsliping.html"' in s:
+            print("  %-24s har allerede norskside-lenke" % fn)
+            continue
+        if anchor in s:
+            write(fn, s.replace(anchor, add, 1))
+        else:
+            print("  VARNING: hittade inget Fredrikstad-anchor i %s" % fn)
+
+
 def patch_sitemap():
     fn = "sitemap.xml"
     s = io.open(fn, encoding="utf-8").read()
-    if "halden.html" in s:
-        print("  sitemap redan uppdaterad")
-        return
     add = []
     for key in ORDER:
+        if CITIES[key]["file"] in s:
+            continue
         add.append('  <url><loc>%s/%s</loc><lastmod>%s</lastmod>'
                    '<changefreq>monthly</changefreq><priority>0.7</priority></url>'
                    % (DOMAIN, CITIES[key]["file"], "2026-11-02"))
+    if GENERIC["file"] not in s:
+        add.append('  <url><loc>%s/%s</loc><lastmod>%s</lastmod>'
+                   '<changefreq>monthly</changefreq><priority>0.8</priority></url>'
+                   % (DOMAIN, GENERIC["file"], "2026-11-02"))
+    if not add:
+        print("  sitemap redan uppdaterad")
+        return
     s = s.replace("</urlset>", "\n".join(add) + "\n</urlset>")
     write(fn, s)
 
@@ -688,18 +1021,21 @@ if __name__ == "__main__":
     print("Bygger norske landingssider ...")
     for key in ORDER:
         write(CITIES[key]["file"], build_page(key))
+    print("Bygger norsk generisk gulvsliping-side ...")
+    write(GENERIC["file"], build_generic())
     print("Bygger takk.html ...")
     c = dict(CITIES["halden"])
     common = dict(phone_link=PHONE_LINK, phone_pretty=PHONE_PRETTY, email=EMAIL,
                   phone_svg15=PHONE_SVG.format(s=15), css_v=CSS_V, domain=DOMAIN,
                   instagram=INSTAGRAM, facebook=FACEBOOK, street=STREET, postal=POSTAL,
-                  locality=LOCALITY, og_image=OG_IMAGE)
+                  locality=LOCALITY, og_image=OG_IMAGE, nav_links=NAV_CITY)
     write("takk.html", fmt(TAKK_PAGE, **common,
                            topbar=fmt(TOPBAR, **common),
                            header=fmt(HEADER, **common),
                            footer=fmt(FOOTER, **common)))
     print("Oppdaterer svenske footere ...")
     patch_swedish_footers()
+    patch_swedish_gulvsliping()
     print("Oppdaterer sitemap.xml ...")
     patch_sitemap()
     print("Klart.")

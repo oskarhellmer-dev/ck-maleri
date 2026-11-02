@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Språkmedvetna meddelanden (sajten har både svenska och norska sidor)
+  var isNb = (document.documentElement.lang || '').indexOf('nb') === 0;
+  var MSG = isNb
+    ? { req: 'Fyll ut dette feltet.', email: 'Skriv inn en gyldig e-postadresse.', sending: 'Sender…' }
+    : { req: 'Fyll i detta fält.', email: 'Ange en giltig e-postadress.', sending: 'Skickar…' };
+
   // --- Mobilmeny ---
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('nav');
@@ -103,9 +109,9 @@ document.addEventListener('DOMContentLoaded', function () {
         clearErr(f);
         var val = (f.value || '').trim();
         if (f.hasAttribute('required') && !val) {
-          setErr(f, 'Fyll i detta fält.'); firstBad = firstBad || f;
+          setErr(f, MSG.req); firstBad = firstBad || f;
         } else if (f.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-          setErr(f, 'Ange en giltig e-postadress.'); firstBad = firstBad || f;
+          setErr(f, MSG.email); firstBad = firstBad || f;
         }
       });
       return firstBad;
@@ -114,10 +120,43 @@ document.addEventListener('DOMContentLoaded', function () {
       var bad = validate();
       if (bad) { e.preventDefault(); bad.focus(); return; }
       var btn = form.querySelector('button[type="submit"], button');
-      if (btn) { btn.disabled = true; btn.textContent = 'Skickar…'; }
+      if (btn) { btn.disabled = true; btn.textContent = MSG.sending; }
     });
     form.addEventListener('input', function (e) {
       if (e.target && e.target.getAttribute('aria-invalid')) clearErr(e.target);
     });
+  }
+
+  // --- Tagline: ord tennes ett og ett i leserekkefølge mens seksjonen passerer.
+  //     rAF-throttlet, og faller tilbake til full farge ved redusert bevegelse.
+  var tl = document.querySelector('[data-tagline]');
+  if (tl) {
+    var words = tl.textContent.trim().split(/\s+/);
+    tl.textContent = '';
+    var spans = words.map(function (w) {
+      var s = document.createElement('span');
+      s.className = 'word'; s.textContent = w;
+      tl.appendChild(s); tl.appendChild(document.createTextNode(' '));
+      return s;
+    });
+    if (reduce) {
+      spans.forEach(function (s) { s.classList.add('on'); });
+    } else {
+      var tlTick = false;
+      var revealTagline = function () {
+        var r = tl.getBoundingClientRect();
+        var vh = window.innerHeight || 800;
+        var p = (vh - r.top) / (r.height + vh * 0.5);
+        p = Math.max(0, Math.min(1, p));
+        var n = Math.round(p * spans.length);
+        spans.forEach(function (s, i) { s.classList.toggle('on', i < n); });
+        tlTick = false;
+      };
+      revealTagline();
+      window.addEventListener('scroll', function () {
+        if (!tlTick) { tlTick = true; requestAnimationFrame(revealTagline); }
+      }, { passive: true });
+      window.addEventListener('resize', revealTagline, { passive: true });
+    }
   }
 });
