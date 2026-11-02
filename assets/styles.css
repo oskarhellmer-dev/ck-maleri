@@ -250,6 +250,17 @@ figure.fig figcaption b{color:var(--ink);font-weight:650}
 .areas li{font-size:var(--fs-base);color:var(--muted);font-weight:500}
 .areas li:not(:last-child)::after{content:"·";margin-left:var(--sp-6);color:var(--line)}
 
+/* Områden: Sverige / Norge sida vid sida */
+.areas-split{display:grid;grid-template-columns:1.15fr 1fr;gap:var(--sp-10);margin-top:var(--sp-6)}
+.areas-split h3{font-size:var(--fs-base);font-weight:700;letter-spacing:.01em;margin:0 0 var(--sp-4);color:var(--ink)}
+.areas-split .areas{margin:0}
+.areas a{color:var(--accent-dark);text-decoration:none;border-bottom:1.5px solid rgba(63,143,94,.35)}
+.areas a:hover{border-bottom-color:var(--accent)}
+.section-lead a{color:var(--accent-dark);font-weight:600;text-decoration:none;
+  border-bottom:1.5px solid rgba(63,143,94,.35)}
+.section-lead a:hover{border-bottom-color:var(--accent)}
+@media (max-width:760px){.areas-split{grid-template-columns:1fr;gap:var(--sp-6)}}
+
 /* Fakta */
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5) var(--sp-8);margin:0}
 .facts div{border-left:3px solid var(--accent);padding-left:var(--sp-4)}
