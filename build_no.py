@@ -18,7 +18,7 @@ NAME        = "CK Måleri & Golv"
 PHONE_LINK  = "+46737033717"
 PHONE_PRETTY = "+46 73 703 37 17"
 EMAIL       = "ckmaleri@gmail.com"
-CSS_V       = "6"
+CSS_V       = "7"
 STREET      = "Föreningsgatan 12"
 POSTAL      = "451 52"
 LOCALITY    = "Uddevalla"
@@ -168,6 +168,9 @@ def faq_pairs(c):
         ("Kan svensker med bolig eller hytte i Norge bruke ROT-fradrag?",
          "Ja, dersom du skatter i Sverige og eier boligen eller hytta i Norge, gjelder svensk "
          "ROT-fradrag innen EØS. Si fra ved befaring, så ser vi på det."),
+        ("Blir arbeidet på bad godkjent?",
+         "Ja. Vi er GVK-auktoriserte og utfører tettesjikt etter GVK sine bransjeregler. Arbeidet "
+         "kontrolleres av en uavhengig kontrollør, og du får dokumentasjonen skriftlig."),
     ]
 
 def faq_schema(c):
@@ -220,7 +223,8 @@ SVC = [
     ("plattsattning.html", "assets/img/tj-plattsattning.webp",
      "Bad med store grå fliser, vegghengt toalett, servant og glassdusj",
      "Flislegging",
-     "Fliser i gang, kjøkken og bad — med tettesjikt som er utført riktig, ikke bare pent på overflaten.",
+     "Fliser i gang, kjøkken og bad — med tettesjikt utført etter GVK sine bransjeregler, ikke bare "
+     "pent på overflaten.",
      ["Fliser og klinker", "Gang, kjøkken og bad", "Fuging og tettesjikt"]),
 ]
 
@@ -248,8 +252,9 @@ USP = [
      "Vi koordinerer gulv, maling, mikrosement og fliser selv."),
     ("Ryddig og rengjort",
      "Vi støvsuger, vasker av og rydder alltid etter oss."),
-    ("Forsikret virksomhet",
-     "Ansvarsforsikring og ryddige avtaler."),
+    ("Forsikret og GVK-auktorisert",
+     "Ansvarsforsikring og ryddige avtaler. Vi er GVK-auktoriserte, så tettesjikt i våtrom "
+     "kontrolleres av en uavhengig kontrollør."),
 ]
 
 TOPBAR = """<div class="topbar">
@@ -400,7 +405,7 @@ FOOTER = """<footer class="site-footer">
         <strong>CK Måleri &amp; Golv</strong>
         <p>Gulvsliping, malerarbeid, mikrosement og flislegging i Uddevalla og Østfold.<br>
         {street}, {postal} {locality}<br>
-        Over 15 års erfaring · Forsikret · Fastpris etter befaring</p>
+        Over 15 års erfaring · Forsikret · GVK-auktorisert · Fastpris etter befaring</p>
       </div>
     </div>
     <div class="footer-col">
