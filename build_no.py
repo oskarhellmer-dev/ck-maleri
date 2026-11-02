@@ -18,7 +18,7 @@ NAME        = "CK Måleri & Golv"
 PHONE_LINK  = "+46737033717"
 PHONE_PRETTY = "+46 73 703 37 17"
 EMAIL       = "ckmaleri@gmail.com"
-CSS_V       = "7"
+CSS_V       = "8"
 STREET      = "Föreningsgatan 12"
 POSTAL      = "451 52"
 LOCALITY    = "Uddevalla"
@@ -284,7 +284,7 @@ HERO = """<section class="hero">
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <p class="eyebrow hero-eyebrow">CK Måleri &amp; Golv · {city} &amp; Østfold · Kun en drøy time via E6</p>
-      <h1 class="hero-title">{h1}</h1>
+      <h1 class="hero-title hero-title--city">{h1}</h1>
       <p class="hero-sub">Gulvsliping · Malerarbeid · Mikrosement · Flislegging</p>
       <p class="hero-tag">{ingress}</p>
       <div class="hero-cta">
