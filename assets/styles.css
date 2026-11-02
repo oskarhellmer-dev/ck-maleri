@@ -146,8 +146,9 @@ h1 em,h2 em,h3 em{font-weight:inherit;color:var(--accent);letter-spacing:0}
 .hero-eyebrow{color:#b9d6c4}
 .hero h1{color:#fff;margin:var(--sp-2) 0 var(--sp-1);font-size:clamp(2.9rem,6.2vw,5.1rem);
   line-height:1.02;letter-spacing:-.02em;font-weight:700;text-shadow:0 2px 30px rgba(0,0,0,.45)}
-/* Stadssidor: hero-rubriken är en hel mening, inte ett enstaka ord — då krävs en mindre skala */
-.hero h1.hero-title--city{font-size:clamp(2.05rem,3.4vw,3.1rem);line-height:1.06;max-width:26ch}
+/* Stadssidor: stor tjänsterubrik + mindre ortsrad under */
+.hero-title-sub{display:block;font-size:.5em;font-weight:500;letter-spacing:.005em;
+  line-height:1.24;margin-top:.14em;color:#dbe9e0}
 .hero-title{font-weight:600}
 .hero-sub{color:#eaf3ec;font-size:clamp(1.05rem,2vw,1.35rem);font-weight:600;
   letter-spacing:.02em;margin:0 0 var(--sp-5);max-width:600px}
@@ -214,6 +215,23 @@ h1 em,h2 em,h3 em{font-weight:inherit;color:var(--accent);letter-spacing:0}
   border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
 .svc-more{margin-top:auto;font-weight:700;font-size:var(--fs-md);color:var(--accent-dark);
   display:inline-flex;align-items:center;gap:var(--sp-2)}
+
+/* Stadssidor (Norge): gulvsliping er hovedsaken — ett stort kort + mindre sekundære */
+.svc-grid.svc-grid--floor{grid-template-columns:repeat(3,1fr)}
+.svc.svc-feature{grid-column:1/-1;display:grid;grid-template-columns:1.05fr 1fr;align-items:stretch}
+.svc.svc-feature img{aspect-ratio:auto;width:100%;height:100%;min-height:340px;max-height:470px;object-fit:cover}
+.svc.svc-feature .svc-body{padding:var(--sp-8) var(--sp-7);justify-content:center}
+.svc.svc-feature h3{font-size:1.6rem}
+.svc.svc-feature p{font-size:var(--fs-base)}
+.svc.svc--mini img{aspect-ratio:1/1;height:auto}
+.svc.svc--mini h3{font-size:1rem}
+.svc.svc--mini p{font-size:var(--fs-sm)}
+@media (max-width:900px){
+  .svc.svc-feature{grid-template-columns:1fr}
+  .svc.svc-feature img{aspect-ratio:16/10;height:auto;min-height:0;max-height:none}
+  .svc.svc-feature .svc-body{padding:var(--sp-6) var(--sp-5)}
+}
+@media (max-width:800px){.svc-grid.svc-grid--floor{grid-template-columns:1fr}}
 
 /* Galleri */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-4)}
@@ -422,7 +440,7 @@ details a{color:var(--accent-dark)}
   .header-cta{gap:var(--sp-2)}
   .header-cta .btn{padding:var(--sp-2) var(--sp-3);font-size:var(--fs-xs)}
   .hero h1{font-size:clamp(2.1rem,10vw,3rem)}
-  .hero h1.hero-title--city{font-size:clamp(1.85rem,7.4vw,2.5rem);max-width:none}
+  .hero-title-sub{font-size:.52em}
   .hero-tag{font-size:clamp(1.1rem,4.6vw,1.4rem);margin-bottom:var(--sp-6)}
   .hero-cta{gap:var(--sp-3)}
   .hero-cta .btn{width:100%;justify-content:center;font-size:var(--fs-lg);padding:var(--sp-4) var(--sp-4)}

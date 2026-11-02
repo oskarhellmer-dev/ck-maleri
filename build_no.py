@@ -18,7 +18,7 @@ NAME        = "CK Måleri & Golv"
 PHONE_LINK  = "+46737033717"
 PHONE_PRETTY = "+46 73 703 37 17"
 EMAIL       = "ckmaleri@gmail.com"
-CSS_V       = "8"
+CSS_V       = "9"
 STREET      = "Föreningsgatan 12"
 POSTAL      = "451 52"
 LOCALITY    = "Uddevalla"
@@ -38,15 +38,14 @@ CITIES = {
     "halden": {
         "file": "halden.html",
         "name": "Halden",
-        "title": "Gulvsliping, maler og mikrosement i Halden | CK Måleri & Golv",
-        "desc": ("Gulvsliping, malerarbeid, mikrosement og flislegging i Halden og Østfold. "
-                 "Gratis befaring, skriftlig fastpris og egne Bona-maskiner. Ring +46 73 703 37 17."),
-        "h1": "Gulvsliping, maler og mikrosement i Halden",
-        "ingress": ("Vi holder til i Uddevalla, like over grensen ved E6, og kommer til Halden for "
-                    "gratis befaring. Du får skriftlig fastpris på forhånd, og vi gjør hele jobben selv "
-                    "— med egne Bona-maskiner."),
+        "title": "Gulvsliping i Halden og Østfold | CK Måleri & Golv",
+        "desc": ("Gulvsliping av parkett, fiskebensparkett og gamle tregulv i Halden og Østfold. "
+                 "Egne Bona-maskiner, støysvakt og nesten støvfritt. Gratis befaring og skriftlig fastpris."),
+        "h1": "Gulvsliping i Halden og Østfold",
+        "hero_tag": ("Vi sliper og behandler tregulv i hele Halden-området. Du får skriftlig fastpris "
+                     "på forhånd, og vi kjører over grensen fra Uddevalla med egne Bona-maskiner."),
         "areas": ["Halden", "Tistedal", "Idd", "Svinesund", "Rokke", "Asak", "Sponvika", "Berg"],
-        "local_h": "Gulv og overflater i Halden og omegn",
+        "local_h": "Gulvsliping i Halden og omegn",
         "local_p": [
             "Halden er en gammel grenseby med mye trehusbebyggelse — empiregårder i sentrum, eldre "
             "villaer i Tistedal og Idd, og en lang rekke hytter langs Iddefjorden og opp mot Svinesund. "
@@ -63,15 +62,14 @@ CITIES = {
     "sarpsborg": {
         "file": "sarpsborg.html",
         "name": "Sarpsborg",
-        "title": "Gulvsliping, mikrosement og malerarbeid i Sarpsborg | CK Måleri & Golv",
-        "desc": ("Gulvsliping, malerarbeid, mikrosement og flislegging i Sarpsborg og Østfold. "
-                 "Gratis befaring, skriftlig fastpris og egne Bona-maskiner. Ring +46 73 703 37 17."),
-        "h1": "Gulvsliping, mikrosement og malerarbeid i Sarpsborg",
-        "ingress": ("Vi holder til i Uddevalla, like over grensen ved E6, og kommer til Sarpsborg for "
-                    "gratis befaring. Du får skriftlig fastpris på forhånd, og vi gjør hele jobben selv "
-                    "— med egne Bona-maskiner."),
+        "title": "Gulvsliping i Sarpsborg og Østfold | CK Måleri & Golv",
+        "desc": ("Gulvsliping av parkett, fiskebensparkett og gamle tregulv i Sarpsborg og Østfold. "
+                 "Egne Bona-maskiner, støysvakt og nesten støvfritt. Gratis befaring og skriftlig fastpris."),
+        "h1": "Gulvsliping i Sarpsborg og Østfold",
+        "hero_tag": ("Vi sliper og behandler tregulv i hele Sarpsborg-området. Du får skriftlig fastpris "
+                     "på forhånd, og vi kjører over grensen fra Uddevalla med egne Bona-maskiner."),
         "areas": ["Sarpsborg", "Grålum", "Borgenhaugen", "Skjeberg", "Hafslund", "Greåker", "Varteig", "Hafslundsøy"],
-        "local_h": "Gulv og overflater i Sarpsborg og omegn",
+        "local_h": "Gulvsliping i Sarpsborg og omegn",
         "local_p": [
             "Sarpsborg har både eldre villaer og nyere blokker, og gulvene varierer deretter. I områder "
             "som Grålum, Borgenhaugen og Hafslund møter vi mye 90-tallsparkett som er slitt, mens de "
@@ -89,15 +87,14 @@ CITIES = {
     "fredrikstad": {
         "file": "fredrikstad.html",
         "name": "Fredrikstad",
-        "title": "Gulvsliping, maler og flislegging i Fredrikstad | CK Måleri & Golv",
-        "desc": ("Gulvsliping, malerarbeid, mikrosement og flislegging i Fredrikstad og på Hvaler. "
-                 "Gratis befaring, skriftlig fastpris og egne Bona-maskiner. Ring +46 73 703 37 17."),
-        "h1": "Gulvsliping, maler og flislegging i Fredrikstad",
-        "ingress": ("Vi holder til i Uddevalla, like over grensen ved E6, og kommer til Fredrikstad og "
-                    "Hvaler for gratis befaring. Du får skriftlig fastpris på forhånd, og vi gjør hele "
-                    "jobben selv — med egne Bona-maskiner."),
+        "title": "Gulvsliping i Fredrikstad og Østfold | CK Måleri & Golv",
+        "desc": ("Gulvsliping av parkett, fiskebensparkett og gamle tregulv i Fredrikstad, Hvaler og "
+                 "Østfold. Egne Bona-maskiner, støysvakt og nesten støvfritt. Gratis befaring og fastpris."),
+        "h1": "Gulvsliping i Fredrikstad og Østfold",
+        "hero_tag": ("Vi sliper og behandler tregulv i hele Fredrikstad og på Hvaler. Du får skriftlig "
+                     "fastpris på forhånd, og vi kjører over grensen fra Uddevalla med egne Bona-maskiner."),
         "areas": ["Fredrikstad", "Kråkerøy", "Gressvik", "Begby", "Rolvsøy", "Onsøy", "Hvaler", "Cicignon"],
-        "local_h": "Gulv og overflater i Fredrikstad og på Hvaler",
+        "local_h": "Gulvsliping i Fredrikstad og på Hvaler",
         "local_p": [
             "Fredrikstad har en av Norges best bevarte festningsbyer, og i Gamlebyen og områdene rundt "
             "Cicignon står trehusene tett. Der er det sjelden rom for moderne gulv — det skal være plank, "
@@ -201,31 +198,34 @@ def areas_links(c):
     return " | ".join(out)
 
 # ------------------------------------------------------------------ mal
-SVC = [
-    ("golvslipning.html", "assets/img/tj-golv.webp",
-     "Lyst ferdigslipet tregulv i et moderne kjøkken",
-     "Gulvsliping",
-     "Parkett, fiskebensparkett og gamle tregulv slipes og behandles på nytt. Ofte er gulvet du "
-     "allerede har bedre enn det du planla å kjøpe.",
-     ["Parkett og fiskebensparkett", "Gamle tregulv", "Lakk, olje eller pigment"]),
-    ("maleri-och-tapet.html", "assets/img/tj-maleri.webp",
-     "Maleruller som drar lys farge over en jevn vegg",
-     "Malerarbeid &amp; tapet",
-     "Vegger, tak, vinduer, dører og fasader. Vi sparkler og grunner ordentlig — ellers synes "
-     "slurvet i dårlig lys.",
-     ["Innvendig og fasade", "Tapetsering", "Sparkling og fuging"]),
-    ("microcement.html", "assets/img/tj-microcement.webp",
-     "Bøtte merket Mikrosement og sparkelspader på et nylagt fugefritt gulv",
-     "Mikrosement",
-     "Fugefrie overflater på bad, gulv, vegger og benkeplater. Et bad i ett stykke, uten fuger som "
-     "misfarges.",
-     ["Bad og kjøkken", "Gulv og vegger", "Helt fugefritt"]),
+SVC_FEATURE = {
+    "href": "golvslipning.html",
+    "img": "assets/img/tj-golv.webp",
+    "alt": "Lyst ferdigslipet tregulv i et moderne kjøkken",
+    "h3": "Gulvsliping",
+    "body": ("Vi tar gulvet ned til rent tre, kontrollerer med lampe mellom hvert steg og legger valgt "
+             "overflate — lakk, olje eller pigment. Gamle gulv blir ofte bedre enn det du planla å kjøpe."),
+    "bullets": ["Parkett og fiskebensparkett", "Gamle tregulv og plankegulv",
+                "Lakk, olje eller pigment", "Støysvakt og nesten støvfritt"],
+}
+
+# Sekundære tjenester — bevisst nedtonet. Flislegging først, malerarbeid sist.
+SVC_MINI = [
     ("plattsattning.html", "assets/img/tj-plattsattning.webp",
      "Bad med store grå fliser, vegghengt toalett, servant og glassdusj",
      "Flislegging",
-     "Fliser i gang, kjøkken og bad — med tettesjikt utført etter GVK sine bransjeregler, ikke bare "
-     "pent på overflaten.",
-     ["Fliser og klinker", "Gang, kjøkken og bad", "Fuging og tettesjikt"]),
+     "Fliser i gang, kjøkken og bad — med tettesjikt utført etter GVK sine bransjeregler.",
+     ["Fliser og klinker", "Fuging og tettesjikt"]),
+    ("microcement.html", "assets/img/tj-microcement.webp",
+     "Bøtte merket Mikrosement og sparkelspader på et nylagt fugefritt gulv",
+     "Mikrosement",
+     "Fugefrie overflater på bad, gulv og vegger — ofte rett på eksisterende fliser.",
+     ["Bad og kjøkken", "Helt fugefritt"]),
+    ("maleri-och-tapet.html", "assets/img/tj-maleri.webp",
+     "Maleruller som drar lys farge over en jevn vegg",
+     "Malerarbeid &amp; tapet",
+     "Vegger, tak, vinduer og fasader, samt sparkling og tapetsering når det trengs.",
+     ["Innvendig og fasade", "Sparkling og fuging"]),
 ]
 
 GALLERY = [
@@ -283,10 +283,10 @@ HERO = """<section class="hero">
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow hero-eyebrow">CK Måleri &amp; Golv · {city} &amp; Østfold · Kun en drøy time via E6</p>
-      <h1 class="hero-title hero-title--city">{h1}</h1>
-      <p class="hero-sub">Gulvsliping · Malerarbeid · Mikrosement · Flislegging</p>
-      <p class="hero-tag">{ingress}</p>
+      <p class="eyebrow hero-eyebrow">CK Måleri &amp; Golv · {city} og Østfold · Kun en drøy time via E6</p>
+      <h1 class="hero-title">Gulvsliping<span class="hero-title-sub">i {city} og Østfold</span></h1>
+      <p class="hero-sub">Sliping av parkett, fiskebensparkett og gamle tregulv</p>
+      <p class="hero-tag">{hero_tag}</p>
       <div class="hero-cta">
         <a class="btn btn-primary btn-lg" href="#kontakt">Bestill gratis befaring <span class="arrow">→</span></a>
         <a class="btn btn-outline btn-lg" href="tel:{phone_link}">{phone_svg17} Ring {phone_pretty}</a>
@@ -298,13 +298,19 @@ HERO = """<section class="hero">
 
 SERVICES = """<section class="section" id="tjenester">
   <div class="wrap">
-    <p class="eyebrow">Hva vi gjør</p>
-    <h2>Alt innen gulv, vegger og overflater — <em>uten mellomledd</em></h2>
-    <p class="section-lead">Et gulv som slipes og et bad som flislegges henger sammen: nivåer, lister,
-      tettesjikt og orden. Vi gjør alt selv, så du slipper å koordinere tre firmaer og to tidsplaner.</p>
-    <div class="svc-grid">
-{cards}
+    <p class="eyebrow">Det vi gjør best</p>
+    <h2>Spesialister på <em>sliping av tregulv og parkett</em></h2>
+    <p class="section-lead">Gamle furugulv, fiskebensparkett og slitt eikeparkett — vi sliper og behandler
+      til en overflate som holder. Egne Bona-maskiner, støysvakt og tilnærmet støvfritt, og skriftlig
+      fastpris etter befaring i {city}.</p>
+    <div class="svc-grid svc-grid--floor">
+{feature}
+
+{secondary}
     </div>
+    <p class="reviews-note" style="margin-top:var(--sp-6)">Vi utfører også flislegging, mikrosement og
+      malerarbeid — men gulvsliping er det vi lever av. Send gjerne en melding om du er usikker på hva
+      gulvet ditt trenger.</p>
   </div>
 </section>"""
 
@@ -312,7 +318,7 @@ WHY = """<section class="section section-pine" id="hvorfor">
   <div class="wrap two-col">
     <div>
       <p class="eyebrow">Hvorfor oss</p>
-      <h2>Hvorfor velge et <em>svensk team</em> i {city}?</h2>
+      <h2>Hvorfor velge et <em>svensk team</em> i {city} og Østfold?</h2>
       <p class="section-lead">Vi er ikke størst. Vi er de som tar jobben, gjør den selv og svarer når du ringer.</p>
     </div>
     <dl class="facts">
@@ -540,7 +546,7 @@ def build_page(key):
     kw.update(dict(
         title=c["title"], desc=c["desc"], canonical=DOMAIN + "/" + c["file"],
         schema=local_business(c), faq_schema=faq_schema(c),
-        city=c["name"], h1=c["h1"], ingress=c["ingress"],
+        city=c["name"], h1=c["h1"], hero_tag=c["hero_tag"],
     ))
     kw.update(dict(
         topbar=fmt(TOPBAR, **common),
@@ -550,7 +556,7 @@ def build_page(key):
         header=fmt(HEADER, **common),
         footer=fmt(FOOTER, **common),
         hero=fmt(HERO, **kw),
-        services=fmt(SERVICES, cards=svc_cards()),
+        services=fmt(SERVICES, city=c["name"], feature=svc_feature(), secondary=svc_mini()),
         gallery=fmt(GALLERY_HTML, figs=gallery_figs()),
         why=fmt(WHY, city=c["name"], facts=usp_dl(c["name"])),
         local=fmt(LOCAL, local_h=c["local_h"],
@@ -562,13 +568,28 @@ def build_page(key):
     return fmt(PAGE, **kw)
 
 
-def svc_cards():
+def svc_feature():
+    c = SVC_FEATURE
+    li = "".join("<li>%s</li>" % b for b in c["bullets"])
+    return (
+        '      <a class="svc svc-feature" href="%s">\n'
+        '        <img src="%s" alt="%s" loading="lazy" width="800" height="600">\n'
+        '        <div class="svc-body">\n'
+        '          <h3>%s</h3>\n'
+        '          <p>%s</p>\n'
+        '          <ul>%s</ul>\n'
+        '          <span class="svc-more">Les om gulvsliping <span class="arrow">→</span></span>\n'
+        '        </div>\n'
+        '      </a>' % (c["href"], c["img"], c["alt"], c["h3"], c["body"], li))
+
+
+def svc_mini():
     out = []
-    for href, img, alt, h3, body, bullets in SVC:
+    for href, img, alt, h3, body, bullets in SVC_MINI:
         li = "".join("<li>%s</li>" % b for b in bullets)
         out.append(
-            '      <a class="svc" href="%s">\n'
-            '        <img src="%s" alt="%s" loading="lazy" width="400" height="400">\n'
+            '      <a class="svc svc--mini" href="%s">\n'
+            '        <img src="%s" alt="%s" loading="lazy" width="600" height="600">\n'
             '        <div class="svc-body">\n'
             '          <h3>%s</h3>\n'
             '          <p>%s</p>\n'
