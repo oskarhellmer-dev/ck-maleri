@@ -160,3 +160,64 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+
+// --- Cookieinfo (GDPR) — visas en gång, valsparas. Ingen spårning. ---
+function initCookieNotice() {
+  var STORAGE_KEY = 'ck-cookie-ok';
+  var prev;
+  try { prev = localStorage.getItem(STORAGE_KEY); } catch (e) { prev = null; }
+  if (prev) return;
+
+  var isNb = (document.documentElement.lang || '').indexOf('nb') === 0;
+  var msg = isNb
+    ? 'Vi bruker ingen sporingskapsler. Siden lagrer bare det du sender i skjemaet – og ingenting utover det.'
+    : 'Vi använder inga spårningskakor. Sajten sparar bara det du skickar i formuläret — och inget mer.';
+  var okText = isNb ? 'Skjønner' : 'Jag förstår';
+  var policyLabel = isNb ? 'Personvern' : 'Integritetspolicy';
+  var policyHref = 'integritetspolicy.html';
+
+  var box = document.createElement('div');
+  box.id = 'cookie-notice';
+  box.setAttribute('role', 'region');
+  box.setAttribute('aria-label', isNb ? 'Informasjon om informasjonskapsler' : 'Information om kakor');
+
+  var txt = document.createElement('p');
+  txt.textContent = msg + ' ';
+  var link = document.createElement('a');
+  link.href = policyHref;
+  link.textContent = policyLabel;
+  txt.appendChild(link);
+
+  var actions = document.createElement('div');
+  actions.className = 'cn-actions';
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'cn-ok';
+  btn.textContent = okText;
+  btn.addEventListener('click', function () {
+    try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+    box.classList.add('cn-hidden');
+  });
+  actions.appendChild(btn);
+
+  var wrap = document.createElement('div');
+  wrap.className = 'cn-actions';
+  wrap.appendChild(txt);
+  wrap.appendChild(actions);
+
+  box.appendChild(wrap);
+  document.body.appendChild(box);
+
+  // Stäng med Escape (tillgänglighet)
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !box.classList.contains('cn-hidden')) {
+      btn.click();
+    }
+  });
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCookieNotice);
+} else {
+  initCookieNotice();
+}
