@@ -151,7 +151,7 @@ h1 em,h2 em,h3 em{font-weight:inherit;color:var(--accent);letter-spacing:0}
   line-height:1.24;margin-top:.14em;color:#dbe9e0}
 .hero-title{font-weight:600}
 .hero-sub{color:#eaf3ec;font-size:clamp(1.05rem,2vw,1.35rem);font-weight:600;
-  letter-spacing:.02em;margin:0 0 var(--sp-5);max-width:600px}
+  letter-spacing:.02em;margin:0 0 var(--sp-5);max-width:600px;white-space:nowrap}
 .hero-tag{color:#fff;font-size:clamp(1.25rem,2.5vw,1.7rem);font-weight:500;
   line-height:1.4;margin:0 0 var(--sp-8);max-width:600px}
 .hero-cta{display:flex;gap:var(--sp-4);flex-wrap:wrap}
